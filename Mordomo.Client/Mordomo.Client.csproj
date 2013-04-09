@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7EB741B8-1A45-4EC8-ACEC-8C40533AE82C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mordomo.Client</RootNamespace>
+    <AssemblyName>Mordomo.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySQL.6.6.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySQL.6.6.5\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySQL.6.6.5\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Access.ascx" />
+    <Content Include="Controls\Menu.ascx" />
+    <Content Include="Controls\Slider.ascx" />
+    <Content Include="css\forms.css" />
+    <Content Include="css\grid.css" />
+    <Content Include="css\jquery-ui-1.8.17.custom.css" />
+    <Content Include="css\jquery.snippet.min.css" />
+    <Content Include="css\prettyPhoto.css" />
+    <Content Include="css\pro_pages_style.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\smoothness\jquery-ui-1.8.17.custom.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Dados\CadastroUsuario.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="images\bg-1.gif" />
+    <Content Include="images\bg-3.png" />
+    <Content Include="images\date_left.png" />
+    <Content Include="images\date_right.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\figure-1.png" />
+    <Content Include="images\footer.png" />
+    <Content Include="images\footer_2.png" />
+    <Content Include="images\footer_menu.png" />
+    <Content Include="images\h3_border.png" />
+    <Content Include="images\icons\20x20\AIM.png" />
+    <Content Include="images\icons\20x20\Apple.png" />
+    <Content Include="images\icons\20x20\Blogger.png" />
+    <Content Include="images\icons\20x20\Delicious.png" />
+    <Content Include="images\icons\20x20\Digg.png" />
+    <Content Include="images\icons\20x20\Dopplr.png" />
+    <Content Include="images\icons\20x20\Evernote.png" />
+    <Content Include="images\icons\20x20\Facebook.png" />
+    <Content Include="images\icons\20x20\Flickr.png" />
+    <Content Include="images\icons\20x20\Google.png" />
+    <Content Include="images\icons\20x20\Linkedin.png" />
+    <Content Include="images\icons\20x20\Mail.png" />
+    <Content Include="images\icons\20x20\MobileMe.png" />
+    <Content Include="images\icons\20x20\MySpace.png" />
+    <Content Include="images\icons\20x20\Picasa.png" />
+    <Content Include="images\icons\20x20\RSS.png" />
+    <Content Include="images\icons\20x20\Skype.png" />
+    <Content Include="images\icons\20x20\Stumble_Upon.png" />
+    <Content Include="images\icons\20x20\Technorati.png" />
+    <Content Include="images\icons\20x20\Twitter.png" />
+    <Content Include="images\icons\20x20\Vimeo.png" />
+    <Content Include="images\icons\20x20\Windows.png" />
+    <Content Include="images\icons\20x20\Yahoo.png" />
+    <Content Include="images\icons\20x20\Youtube.png" />
+    <Content Include="images\icons\35x35\blip.png" />
+    <Content Include="images\icons\35x35\facebook.png" />
+    <Content Include="images\icons\35x35\flickr.png" />
+    <Content Include="images\icons\35x35\lastfm.png" />
+    <Content Include="images\icons\35x35\linkedin.png" />
+    <Content Include="images\icons\35x35\myspace.png" />
+    <Content Include="images\icons\35x35\picasa.png" />
+    <Content Include="images\icons\35x35\rss.png" />
+    <Content Include="images\icons\35x35\tumblr.png" />
+    <Content Include="images\icons\35x35\twitter.png" />
+    <Content Include="images\icons\35x35\vimeo.png" />
+    <Content Include="images\icons\35x35\wordpress.png" />
+    <Content Include="images\icons\35x35\yt.png" />
+    <Content Include="images\icons\40x40\delicious_small.png" />
+    <Content Include="images\icons\40x40\digg_small.png" />
+    <Content Include="images\icons\40x40\facebook_small.png" />
+    <Content Include="images\icons\40x40\flickr_small.png" />
+    <Content Include="images\icons\40x40\lastfm_small.png" />
+    <Content Include="images\icons\40x40\linkedin_small.png" />
+    <Content Include="images\icons\40x40\myspace_small.png" />
+    <Content Include="images\icons\40x40\rss_small.png" />
+    <Content Include="images\icons\40x40\stumbleupon_small.png" />
+    <Content Include="images\icons\40x40\technorati_small.png" />
+    <Content Include="images\icons\40x40\twitter_small.png" />
+    <Content Include="images\icons\40x40\vimeo_small.png" />
+    <Content Include="images\icons\40x40\youtube_small.png" />
+    <Content Include="images\icons\55x55_2\delicious.png" />
+    <Content Include="images\icons\55x55_2\facebook.png" />
+    <Content Include="images\icons\55x55_2\flickr.png" />
+    <Content Include="images\icons\55x55_2\foursquare.png" />
+    <Content Include="images\icons\55x55_2\google_buzz.png" />
+    <Content Include="images\icons\55x55_2\rss.png" />
+    <Content Include="images\icons\55x55_2\stumbleupon.png" />
+    <Content Include="images\icons\55x55_2\technorati.png" />
+    <Content Include="images\icons\55x55_2\tumblr.png" />
+    <Content Include="images\icons\55x55_2\twitter.png" />
+    <Content Include="images\icons\big\delicious.png" />
+    <Content Include="images\icons\big\facebook.png" />
+    <Content Include="images\icons\big\flickr.png" />
+    <Content Include="images\icons\big\furl.png" />
+    <Content Include="images\icons\big\reddit.png" />
+    <Content Include="images\icons\big\rss.png" />
+    <Content Include="images\icons\big\stumbleupon.png" />
+    <Content Include="images\icons\big\technorati.png" />
+    <Content Include="images\icons\big\twitter.png" />
+    <Content Include="images\icons\big\yahoo.png" />
+    <Content Include="images\icons\big\youtube.png" />
+    <Content Include="images\icons\copy.png" />
+    <Content Include="images\icons\delicious.png" />
+    <Content Include="images\icons\email.png" />
+    <Content Include="images\icons\facebook.png" />
+    <Content Include="images\icons\feed.png" />
+    <Content Include="images\icons\flickr.png" />
+    <Content Include="images\icons\icon-next.png" />
+    <Content Include="images\icons\icon-previous.png" />
+    <Content Include="images\icons\icons-color.png" />
+    <Content Include="images\icons\icons-light.png" />
+    <Content Include="images\icons\linkedin.png" />
+    <Content Include="images\icons\medium\aim.png" />
+    <Content Include="images\icons\medium\delicious.png" />
+    <Content Include="images\icons\medium\facebook.png" />
+    <Content Include="images\icons\medium\flickr.png" />
+    <Content Include="images\icons\medium\google.png" />
+    <Content Include="images\icons\medium\linkedin.png" />
+    <Content Include="images\icons\medium\picasa.png" />
+    <Content Include="images\icons\medium\reddit.png" />
+    <Content Include="images\icons\medium\rss.png" />
+    <Content Include="images\icons\medium\skype.png" />
+    <Content Include="images\icons\medium\stumbleupon.png" />
+    <Content Include="images\icons\medium\technorati.png" />
+    <Content Include="images\icons\medium\twitter.png" />
+    <Content Include="images\icons\medium\vimeo.png" />
+    <Content Include="images\icons\stumble.png" />
+    <Content Include="images\icons\tripadvisor.png" />
+    <Content Include="images\icons\twitter.png" />
+    <Content Include="images\icons\twitter_bird_2.png" />
+    <Content Include="images\icons\vimeo.png" />
+    <Content Include="images\icons\youtube.png" />
+    <Content Include="images\image-blank.png" />
+    <Content Include="images\img_hover.png" />
+    <Content Include="images\link-1.png" />
+    <Content Include="images\list-1.png" />
+    <Content Include="images\list-1_img.png" />
+    <Content Include="images\list-2.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo2.png" />
+    <Content Include="images\menu.png" />
+    <Content Include="images\menu2.png" />
+    <Content Include="images\page1_img1.jpg" />
+    <Content Include="images\page1_img2.jpg" />
+    <Content Include="images\page1_img3.jpg" />
+    <Content Include="images\page1_img4.jpg" />
+    <Content Include="images\page1_img5.jpg" />
+    <Content Include="images\page1_img6.jpg" />
+    <Content Include="images\page1_img7.jpg" />
+    <Content Include="images\page1_img8.jpg" />
+    <Content Include="images\page1_img9.jpg" />
+    <Content Include="images\pro_images\bg-banner.png" />
+    <Content Include="images\pro_images\blockquote.png" />
+    <Content Include="images\pro_images\blockquote2.png" />
+    <Content Include="images\pro_images\blockquote3.png" />
+    <Content Include="images\pro_images\checkbox.png" />
+    <Content Include="images\pro_images\description-arrow-white.png" />
+    <Content Include="images\pro_images\full-width.png" />
+    <Content Include="images\pro_images\layouts-img2.png" />
+    <Content Include="images\pro_images\layouts-img3.png" />
+    <Content Include="images\pro_images\layouts-img4.png" />
+    <Content Include="images\pro_images\layouts-img5.png" />
+    <Content Include="images\pro_images\layouts-img6.png" />
+    <Content Include="images\pro_images\layouts-img7.png" />
+    <Content Include="images\pro_images\layouts-img8.png" />
+    <Content Include="images\pro_images\magnifying-glass.png" />
+    <Content Include="images\pro_images\misc-minus.png" />
+    <Content Include="images\pro_images\misc-plus.png" />
+    <Content Include="images\pro_images\panel_bg.png" />
+    <Content Include="images\pro_images\plus-minus.png" />
+    <Content Include="images\pro_images\portfolio-1col.png" />
+    <Content Include="images\pro_images\portfolio-2col+capt.png" />
+    <Content Include="images\pro_images\portfolio-2col.png" />
+    <Content Include="images\pro_images\portfolio-3col+capt.png" />
+    <Content Include="images\pro_images\portfolio-3col.png" />
+    <Content Include="images\pro_images\portfolio-4col+capt.png" />
+    <Content Include="images\pro_images\portfolio-4col.png" />
+    <Content Include="images\pro_images\pro-logo.png" />
+    <Content Include="images\pro_images\pro_button.png" />
+    <Content Include="images\pro_images\pro_home.png" />
+    <Content Include="images\pro_images\pro_menu_arrow %281%29.png" />
+    <Content Include="images\pro_images\pro_menu_arrow.png" />
+    <Content Include="images\pro_images\pro_submenu.png" />
+    <Content Include="images\pro_images\quotes.png" />
+    <Content Include="images\pro_images\quotes2.png" />
+    <Content Include="images\pro_images\radio.png" />
+    <Content Include="images\pro_images\right_arrow.png" />
+    <Content Include="images\pro_images\select.png" />
+    <Content Include="images\pro_images\table1.png" />
+    <Content Include="images\pro_images\table2.png" />
+    <Content Include="images\pro_images\table3.png" />
+    <Content Include="images\pro_images\table4.png" />
+    <Content Include="images\pro_images\ul_list1_marker.png" />
+    <Content Include="images\pro_images\ul_list2_marker.png" />
+    <Content Include="images\slider_next.png" />
+    <Content Include="images\slider_prev.png" />
+    <Content Include="images\slide_1.jpg" />
+    <Content Include="images\slide_2.jpg" />
+    <Content Include="images\slide_3.jpg" />
+    <Content Include="images\soc_1.png" />
+    <Content Include="images\soc_2.png" />
+    <Content Include="images\soc_3.png" />
+    <Content Include="images\soc_4.png" />
+    <Content Include="images\stock_images\120x120_1.jpg" />
+    <Content Include="images\stock_images\120x120_2.jpg" />
+    <Content Include="images\stock_images\120x120_3.jpg" />
+    <Content Include="images\stock_images\120x120_4.jpg" />
+    <Content Include="images\stock_images\120x120_5.jpg" />
+    <Content Include="images\stock_images\120x120_6.jpg" />
+    <Content Include="images\stock_images\120x120_7.jpg" />
+    <Content Include="images\stock_images\120x120_8.jpg" />
+    <Content Include="images\stock_images\200x150_1.jpg" />
+    <Content Include="images\stock_images\200x150_2.jpg" />
+    <Content Include="images\stock_images\200x150_3.jpg" />
+    <Content Include="images\stock_images\200x150_4.jpg" />
+    <Content Include="images\stock_images\200x150_5.jpg" />
+    <Content Include="images\stock_images\200x150_6.jpg" />
+    <Content Include="images\stock_images\200x150_7.jpg" />
+    <Content Include="images\stock_images\200x150_8.jpg" />
+    <Content Include="images\stock_images\280x200_1.jpg" />
+    <Content Include="images\stock_images\280x200_2 %281%29.jpg" />
+    <Content Include="images\stock_images\280x200_2.jpg" />
+    <Content Include="images\stock_images\280x200_3.jpg" />
+    <Content Include="images\stock_images\280x200_4.jpg" />
+    <Content Include="images\stock_images\280x200_5.jpg" />
+    <Content Include="images\stock_images\280x200_6.jpg" />
+    <Content Include="images\stock_images\280x200_7.jpg" />
+    <Content Include="images\stock_images\280x200_8.jpg" />
+    <Content Include="images\stock_images\300x200_1.jpg" />
+    <Content Include="images\stock_images\300x200_2.jpg" />
+    <Content Include="images\stock_images\300x200_3.jpg" />
+    <Content Include="images\stock_images\300x200_4.jpg" />
+    <Content Include="images\stock_images\300x200_5.jpg" />
+    <Content Include="images\stock_images\300x200_6.jpg" />
+    <Content Include="images\stock_images\300x200_7.jpg" />
+    <Content Include="images\stock_images\300x200_8.jpg" />
+    <Content Include="images\stock_images\450x300_1.jpg" />
+    <Content Include="images\stock_images\450x300_2.jpg" />
+    <Content Include="images\stock_images\450x300_3.jpg" />
+    <Content Include="images\stock_images\450x300_4.jpg" />
+    <Content Include="images\stock_images\450x300_5.jpg" />
+    <Content Include="images\stock_images\450x300_6.jpg" />
+    <Content Include="images\stock_images\450x300_7.jpg" />
+    <Content Include="images\stock_images\450x300_8.jpg" />
+    <Content Include="images\stock_images\700x430_1.jpg" />
+    <Content Include="images\stock_images\700x430_2.jpg" />
+    <Content Include="images\stock_images\700x430_3.jpg" />
+    <Content Include="images\stock_images\700x430_4.jpg" />
+    <Content Include="images\stock_images\700x430_5.jpg" />
+    <Content Include="images\stock_images\700x430_6.jpg" />
+    <Content Include="images\stock_images\700x430_7.jpg" />
+    <Content Include="images\stock_images\700x430_8.jpg" />
+    <Content Include="images\stock_images\70x70_1.jpg" />
+    <Content Include="images\stock_images\70x70_2.jpg" />
+    <Content Include="images\stock_images\70x70_3.jpg" />
+    <Content Include="images\stock_images\70x70_4.jpg" />
+    <Content Include="images\stock_images\70x70_5.jpg" />
+    <Content Include="images\stock_images\70x70_6.jpg" />
+    <Content Include="images\stock_images\70x70_7.jpg" />
+    <Content Include="images\stock_images\70x70_8.jpg" />
+    <Content Include="images\stock_images\900x500_1.jpg" />
+    <Content Include="images\stock_images\900x500_2.jpg" />
+    <Content Include="images\stock_images\900x500_3.jpg" />
+    <Content Include="images\stock_images\900x500_4.jpg" />
+    <Content Include="images\stock_images\900x500_5.jpg" />
+    <Content Include="images\stock_images\900x500_6.jpg" />
+    <Content Include="images\stock_images\900x500_7.jpg" />
+    <Content Include="images\stock_images\900x500_8.jpg" />
+    <Content Include="images\sub.png" />
+    <Content Include="images\sub_2.png" />
+    <Content Include="images\tweet.png" />
+    <Content Include="js\FF-cash.js" />
+    <Content Include="js\flashobject.js" />
+    <Content Include="js\forms.js" />
+    <Content Include="js\jplayer.playlist.min.js" />
+    <Content Include="js\jquery-1.7.1.min.js" />
+    <Content Include="js\jquery-ui-1.8.17.custom.min.js" />
+    <Content Include="js\jquery.atooltip.pack.js" />
+    <Content Include="js\jquery.cookie.js" />
+    <Content Include="js\jquery.cycle.all.min.js" />
+    <Content Include="js\jquery.easing.1.3.js" />
+    <Content Include="js\jquery.hoverIntent.minified.js" />
+    <Content Include="js\jquery.jplayer.min.js" />
+    <Content Include="js\jquery.jqtransform.js" />
+    <Content Include="js\jquery.prettyPhoto.js" />
+    <Content Include="js\jquery.quicksand.js" />
+    <Content Include="js\jquery.snippet.min.js" />
+    <Content Include="js\jquery.tools.min.js" />
+    <Content Include="js\jquery.tweet.js" />
+    <Content Include="js\kwicks-1.5.1.pack.js" />
+    <Content Include="js\script.js" />
+    <Content Include="js\superfish.js" />
+    <Content Include="js\tms-0.4.1.js" />
+    <Content Include="js\uCarousel.js" />
+    <Content Include="skin\blue.monday\jplayer.blue.monday.css" />
+    <Content Include="skin\blue.monday\jplayer.blue.monday.jpg" />
+    <Content Include="skin\blue.monday\jplayer.blue.monday.video.play.png" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Access.ascx.cs">
+      <DependentUpon>Access.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Access.ascx.designer.cs">
+      <DependentUpon>Access.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Slider.ascx.cs">
+      <DependentUpon>Slider.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Slider.ascx.designer.cs">
+      <DependentUpon>Slider.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Dados\CadastroUsuario.aspx.cs">
+      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dados\CadastroUsuario.aspx.designer.cs">
+      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\icomoon-webfont.woff" />
+    <Content Include="fonts\icomoonsocial-webfont.ttf" />
+    <Content Include="fonts\icomoonsocial-webfont.woff" />
+    <Content Include="video\01\32713_03_Low.webm" />
+    <Content Include="Master\Default.Master" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mordomo.Business\Mordomo.Business.csproj">
+      <Project>{2a4c56bb-2f71-4e8b-bdaf-f5d2c26e5224}</Project>
+      <Name>Mordomo.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mordomo.Data\Mordomo.Data.csproj">
+      <Project>{cb7687ca-7cc1-486c-9690-de017bc2b794}</Project>
+      <Name>Mordomo.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mordomo.Entities\Mordomo.Entities.csproj">
+      <Project>{46f2d94d-3962-45f6-99d2-b2c7faabe398}</Project>
+      <Name>Mordomo.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63633/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
