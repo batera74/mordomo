@@ -1,0 +1,16 @@
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\Mordomo.UnitTests.dll
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\Mordomo.UnitTests.pdb
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\Mordomo.Business.dll
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\Mordomo.Data.dll
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\Mordomo.Entities.dll
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\EntityFramework.dll
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\Mordomo.Business.pdb
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\Mordomo.Data.pdb
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\Mordomo.Entities.pdb
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\EntityFramework.xml
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\obj\Debug\Mordomo.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\obj\Debug\Mordomo.UnitTests.dll
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\obj\Debug\Mordomo.UnitTests.pdb
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\Mordomo.UnitTests.dll.config
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\Mordomo.FakeEntities.dll
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\Mordomo.FakeEntities.pdb

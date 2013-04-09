@@ -10,6 +10,6 @@ namespace Mordomo.Entities
         public virtual Provider Provider { get; set; }
         public virtual Client Client { get; set; }
         public string Commentary { get; set; }
-        public double Rating { get; set; }
+        public double RatingValue { get; set; }
     }
 }

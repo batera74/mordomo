@@ -21,7 +21,7 @@ namespace Mordomo.Entities
         {
             get
             {
-                return (from r in Ratings select r.Rating).Average();
+                return (from r in Ratings select r.RatingValue).Average();
             }
         }
     }

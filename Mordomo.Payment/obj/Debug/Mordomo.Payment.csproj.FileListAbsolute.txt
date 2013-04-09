@@ -1,0 +1,4 @@
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.Payment\bin\Debug\Mordomo.Payment.dll
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.Payment\bin\Debug\Mordomo.Payment.pdb
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.Payment\obj\Debug\Mordomo.Payment.dll
+C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.Payment\obj\Debug\Mordomo.Payment.pdb

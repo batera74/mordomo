@@ -1,0 +1,5 @@
+C:\Users\guilhermea\Documents\GitHub\omordomo\Projeto\Mordomo\mordomo.client\bin\Mordomo.Client.dll
+C:\Users\guilhermea\Documents\GitHub\omordomo\Projeto\Mordomo\mordomo.client\bin\Mordomo.Client.pdb
+C:\Users\guilhermea\Documents\GitHub\omordomo\Projeto\Mordomo\mordomo.client\obj\Release\mordomo.client.csprojResolveAssemblyReference.cache
+C:\Users\guilhermea\Documents\GitHub\omordomo\Projeto\Mordomo\mordomo.client\obj\Release\Mordomo.Client.dll
+C:\Users\guilhermea\Documents\GitHub\omordomo\Projeto\Mordomo\mordomo.client\obj\Release\Mordomo.Client.pdb

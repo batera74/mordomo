@@ -1,0 +1,195 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="Mordomo.Client.master.Default" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>O Mordomo</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!--[if lt IE 8]>
+   <div style=' clear: both; text-align:center; position: relative;'>
+     <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+       <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+    </a>
+  </div>
+<![endif]-->
+    <!--[if lt IE 9]>
+	<script src="js/html5.js"></script>
+	<link rel="stylesheet" href="css/ie.css"> 
+<![endif]-->
+
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body id="page1">
+    <!-- PRO Framework Panel Begin -->
+   <!-- <div id="advanced">
+        <span class="trigger"><strong></strong><em></em></span>
+        <div class="bg_pro">
+            <div class="pro_main">
+                <span class="pro_logo"></span>
+                <ul class="pro_menu">
+                    <li><a href="index.html">
+                        <img src="images/pro_images/pro_home.png" alt=""></a></li>
+                    <li><a href="404.html">Pages<span></span></a><ul>
+                        <li><a href="under_construction.html">Under Construction</a></li>
+                        <li><a href="intro.html">Intro Page</a></li>
+                        <li><a href="404.html">404 page</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="layouts.html">Layouts</a></li>
+                    <li><a href="typography.html">Typography</a></li>
+                    <li><a href="portfolio.html">Gallery Layouts<span></span></a><ul>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><span></span><a href="just-slider.html">Sliders</a><ul>
+                            <li><a href="just-slider.html">Just Slider</a></li>
+                            <li><a href="kwicks.html">Kwicks Slider</a></li>
+                            <li><a href="functional-slider.html">Functional Slider</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="gallery-page1.html">Gallery</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="misc.html">Extras<span></span></a><ul>
+                        <li><a href="social_media.html">Social and Media<br>
+                            Sharing</a></li>
+                        <li><a href="css3.html">CSS3 Tricks</a></li>
+                        <li><a href="misc.html">Misc</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                <div class="pro_clear"></div>
+            </div>
+        </div>
+        <div class="bg_pro2"></div>
+    </div> -->
+    <!-- PRO Framework Panel End -->
+    <form id="form1" runat="server">
+        <div class="user-area p2">
+            <div class="main">
+                Entrar | Não é cliente? Cadastra-se!
+            </div>
+        </div>
+        <div class="bg-1">
+            <!-- Header -->
+            <header>
+                <div class="main margin-bot">
+                    <div class="">
+                        <h1><a href="index.html">creature</a></h1>
+                        <ul class="soc_list">
+                            <li><a href="more.html">
+                                <img src="images/soc_1.png" alt=""></a></li>
+                            <li><a href="more.html">
+                                <img src="images/soc_2.png" alt=""></a></li>
+                            <li><a href="more.html">
+                                <img src="images/soc_3.png" alt=""></a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="bg-2">
+                    <div class="main">
+                        <nav>
+                            <ul class="menu">
+                                <li><a class="active" href="index.html">Home</a></li>
+                                <li><a href="index-1.html">O Mordomo</a></li>
+                                <li><a href="index-2.html">Serviços</a>
+                                    <%--<ul>
+                                        <li><a href="more.html">Illustration</a></li>
+                                        <li><a href="more.html">Animation</a>
+                                            <ul>
+                                                <li><a href="more.html">Java animation</a></li>
+                                                <li><a href="more.html">flash animation</a></li>
+                                                <li><a href="more.html">3d animation</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="more.html">3D models</a></li>
+                                    </ul>--%>
+                                </li>
+                                <li><a href="index-3.html">Clientes</a></li>
+                                <li><a href="index-4.html">Parceiros</a></li>
+                                <li><a href="index-5.html">Contato</a></li>
+                            </ul>
+                        </nav>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </header>
+            <asp:ContentPlaceHolder ID="Content" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Footer -->
+        <div class="bg-4">
+            <div class="container_12">
+                <aside>
+                    <div class="wrapper">
+                        <article class="grid_4">
+                            <h6>Últimos tweets</h6>
+                            <div class="tweet"></div>
+                            <a class="link-2" href="more.html">Visite nosso perfil!</a>
+                        </article>
+                        <article class="grid_4">
+                            <h6>Comentários Recentes</h6>
+                            <ul class="list-1">
+                                <li>
+                                    <img src="images/list-1_img.png" alt=""><a href="more.html">Mes cuml dia. Sed in lacus ut enim ascing aliiqt sit amet euismodicto ut ligulatmi dapibu dope.</a></li>
+                                <li>
+                                    <img src="images/list-1_img.png" alt=""><a href="more.html">Sed in lacus ut enim ascing aliiqtsi amet euismodictor igulatmi dapib dope ticduntsentet justo dolor.</a></li>
+                            </ul>
+                        </article>
+                        <article class="grid_4">
+                            <h6>Entre em contato:</h6>
+                            <%--<div class="flickr">
+                                <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?show_name=1&amp;count=7&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=54088809@N05"></script>
+                            </div>--%>
+                        </article>
+                    </div>
+                </aside>
+                <footer>
+                    <div class="wrapper">
+                        <article class="grid_4">
+                            o mordomo &copy; 2013 &nbsp;| &nbsp;<a href="index-6.html">política de privacidade</a>
+                            <div>
+                                <!--{%FOOTER_LINK} -->
+                            </div>
+                        </article>
+                        <article class="grid_8">
+                            <div class="wrapper">
+                                <nav>
+                                    <ul class="menu2">
+                                        <li><a class="active" href="index.html">Home</a></li>
+                                        <li><a href="index-1.html">O Mordomo</a></li>
+                                        <li><a href="index-2.html">Serviços</a></li>
+                                        <li><a href="index-3.html">Clientes</a></li>
+                                        <li><a href="index-4.html">Parceiros</a></li>
+                                        <li><a href="index-5.html">Contato</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </article>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-7078796-5']);
+            _gaq.push(['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();</script>
+    </form>
+</body>
+</html>
