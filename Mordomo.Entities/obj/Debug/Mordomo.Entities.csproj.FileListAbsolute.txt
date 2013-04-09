@@ -8,3 +8,7 @@ C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.Entities\bin\Debug\Mordomo
 C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.Entities\obj\Debug\Mordomo.Entities.dll
 C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.Entities\obj\Debug\Mordomo.Entities.pdb
 C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.Entities\obj\Debug\Mordomo.Entities.csprojResolveAssemblyReference.cache
+C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.Entities\bin\Debug\Mordomo.Entities.dll
+C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.Entities\bin\Debug\Mordomo.Entities.pdb
+C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.Entities\obj\Debug\Mordomo.Entities.dll
+C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.Entities\obj\Debug\Mordomo.Entities.pdb
