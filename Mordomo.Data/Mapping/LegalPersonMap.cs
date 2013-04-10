@@ -27,16 +27,9 @@ namespace Mordomo.Data.Mapping
                .IsRequired()
                .HasMaxLength(14);
 
-            this.Property(p =>p.BusinessPhone)
-               .IsRequired()
-               .HasMaxLength(11);
-
             // Table & Column Mappings
             this.ToTable("LegalPerson");
             this.Property(p => p.Id).HasColumnName("LegalPerson_Id");            
-            this.Property(p => p.FancyName).HasColumnName("FancyName");
-            this.Property(p => p.CorporateName).HasColumnName("CorporateName");
-            this.Property(p => p.BusinessPhone).HasColumnName("BusinessPhone");
 
             //Relationships
             this.HasRequired(p => p.User)

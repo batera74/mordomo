@@ -19,7 +19,7 @@
             auto_join_text_ed: "eu",                   // [string]   auto text for past tense: "i" surfed
             auto_join_text_ing: "eu sou",               // [string]   auto tense for present tense: "i was" surfing
             auto_join_text_reply: "eu respondi para",     // [string]   auto tense for replies: "i replied to" @someone "with"
-            auto_join_text_url: "i was looking at",   // [string]   auto tense for urls: "i was looking at" http:...
+            auto_join_text_url: "Eu vi isso em",   // [string]   auto tense for urls: "i was looking at" http:...
             loading_text: null,                       // [string]   optional loading text, displayed while tweets load
             refresh_interval: null,                  // [integer]  optional number of seconds after which to reload tweets
             twitter_url: "twitter.com",               // [string]   custom twitter url, if any (apigee, etc.)
@@ -83,7 +83,7 @@
                     var entity = entities[i];
                     if (entity.url == url && entity.expanded_url) {
                         url = entity.expanded_url;
-                        text = entity.display_url;
+                        text = entity.display_url.substring(0, 30) + "...";
                         break;
                     }
                 }

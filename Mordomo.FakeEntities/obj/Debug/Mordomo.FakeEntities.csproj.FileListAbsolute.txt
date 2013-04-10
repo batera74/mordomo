@@ -5,10 +5,3 @@ C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.FakeEntities\bin\Debug\Mor
 C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.FakeEntities\obj\Debug\Mordomo.FakeEntities.csprojResolveAssemblyReference.cache
 C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.FakeEntities\obj\Debug\Mordomo.FakeEntities.dll
 C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.FakeEntities\obj\Debug\Mordomo.FakeEntities.pdb
-C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.FakeEntities\bin\Debug\Mordomo.FakeEntities.dll
-C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.FakeEntities\bin\Debug\Mordomo.FakeEntities.pdb
-C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.FakeEntities\bin\Debug\Mordomo.Entities.dll
-C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.FakeEntities\bin\Debug\Mordomo.Entities.pdb
-C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.FakeEntities\obj\Debug\Mordomo.FakeEntities.csprojResolveAssemblyReference.cache
-C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.FakeEntities\obj\Debug\Mordomo.FakeEntities.dll
-C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.FakeEntities\obj\Debug\Mordomo.FakeEntities.pdb

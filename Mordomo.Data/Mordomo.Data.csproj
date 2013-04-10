@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GenericRepository.cs" />
+    <Compile Include="Mapping\CountryMap.cs" />
     <Compile Include="Mapping\CreditCardMap.cs" />
     <Compile Include="Mapping\CityMap.cs" />
     <Compile Include="Mapping\ClientMap.cs" />

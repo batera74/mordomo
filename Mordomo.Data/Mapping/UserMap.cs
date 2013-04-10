@@ -29,6 +29,10 @@ namespace Mordomo.Data.Mapping
                 .IsRequired()
                 .HasMaxLength(10);
 
+            this.Property(u => u.MobilePhone)
+                .IsRequired()
+                .HasMaxLength(11);
+
             this.Property(u => u.Login)
                 .IsRequired()
                 .HasMaxLength(50);
@@ -42,13 +46,6 @@ namespace Mordomo.Data.Mapping
             // Table & Column Mappings
             this.ToTable("User");
             this.Property(u => u.Id).HasColumnName("User_Id");
-            this.Property(u => u.Email).HasColumnName("Email");
-            this.Property(u => u.Active).HasColumnName("Active");
-            this.Property(u => u.LastLogin).HasColumnName("UltimoLogin");
-            this.Property(u => u.Phone).HasColumnName("Phone");
-            this.Property(u => u.Login).HasColumnName("Login");
-            this.Property(u => u.Password).HasColumnName("Password");
-            this.Property(u => u.Verified).HasColumnName("Verified");
 
             //Relationships
             this.HasMany(u => u.Andresses)

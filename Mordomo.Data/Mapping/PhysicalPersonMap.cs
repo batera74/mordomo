@@ -30,23 +30,13 @@ namespace Mordomo.Data.Mapping
                 .IsRequired()
                 .HasMaxLength(11);
 
-            this.Property(p => p.MobilePhone)
-                .IsRequired()
-                .HasMaxLength(11);
-
             this.Property(p => p.Gender)
                 .IsRequired()
                 .HasMaxLength(1);
 
             // Table & Column Mappings
             this.ToTable("PhysicalPerson");
-            this.Property(p => p.Id).HasColumnName("PhysicalPerson_Id");            
-            this.Property(p => p.Name).HasColumnName("Name");
-            this.Property(p => p.LastName).HasColumnName("LastName");
-            this.Property(p => p.BirthDate).HasColumnName("BirthDate");
-            this.Property(p => p.CPF).HasColumnName("CPF");
-            this.Property(p => p.MobilePhone).HasColumnName("MobilePhone");
-            this.Property(p => p.Gender).HasColumnName("Gender");
+            this.Property(p => p.Id).HasColumnName("PhysicalPerson_Id");    
         
             //Relationships
 

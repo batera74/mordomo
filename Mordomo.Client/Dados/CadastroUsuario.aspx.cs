@@ -12,6 +12,28 @@ namespace Mordomo.Client.Dados
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["activePageName"] = "cadastroUsuario";
+
+            if (!IsPostBack)
+            {
+                this.pnlForm.Visible = false;
+            }
+        }
+
+        protected void lnkPhysicalPerson_Click(object sender, EventArgs e)
+        {
+            ChangePersonFormVisibility(pnlPhysicalPerson);
+        }
+
+        protected void lnkLegalPerson_Click(object sender, EventArgs e)
+        {
+            ChangePersonFormVisibility(pnlLegalPerson);
+        }
+
+        private void ChangePersonFormVisibility(Panel personTypePanel)
+        {
+            pnlPerson.Visible = false;
+            pnlForm.Visible = true;
+            personTypePanel.Visible = true;
         }
     }
 }

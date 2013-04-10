@@ -23,11 +23,6 @@ namespace Mordomo.Data.Mapping
             this.ToTable("City");
             this.Property(p => p.Id).HasColumnName("City_Id");
             this.Property(p => p.Name).HasColumnName("Name");            
-
-            //relationships
-            this.HasRequired(c => c.State)
-                .WithMany(s => s.Cities)
-                .WillCascadeOnDelete();
         }
     }
 }

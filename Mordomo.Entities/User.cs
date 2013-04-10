@@ -17,6 +17,7 @@ namespace Mordomo.Entities
         public bool Active { get; set; }
         public DateTime LastLogin { get; set; }
         public string Phone { get; set; }
+        public string MobilePhone { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }        
         public bool Verified { get; set; }

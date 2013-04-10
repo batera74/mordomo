@@ -13,6 +13,5 @@ namespace Mordomo.Entities
         public DateTime BirthDate { get; set; }
         public string CPF { get; set; }
         public string Gender { get; set; }
-        public string MobilePhone { get; set; }
     }
 }

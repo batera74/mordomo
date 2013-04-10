@@ -14,6 +14,7 @@ namespace Mordomo.Entities
 
         public string Name { get; set; }
         public int ServiceOrdersPerMonth { get; set; }
+        public string CryptImage { get; set; }
         public virtual List<Account> Accounts { get; set; }
     }
 }

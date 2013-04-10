@@ -11,6 +11,5 @@ namespace Mordomo.Entities
         public string FancyName { get; set; }
         public string CorporateName { get; set; }
         public string CNPJ { get; set; }
-        public string BusinessPhone { get; set; }
     }
 }
