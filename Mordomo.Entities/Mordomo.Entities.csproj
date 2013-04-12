@@ -40,7 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="Breadcrumb.cs" />
+    <Compile Include="BreadcrumbItem.cs" />
     <Compile Include="Country.cs" />
+    <Compile Include="Page.cs" />
     <Compile Include="Rating.cs" />
     <Compile Include="Credit.cs" />
     <Compile Include="Andress.cs" />

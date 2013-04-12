@@ -19,6 +19,7 @@ namespace Mordomo.Data
         public DbSet<Andress> Andress { get; set; }
         public DbSet<City> City { get; set; }
         public DbSet<State> State { get; set; }
+        public DbSet<Country> Country { get; set; }
         public DbSet<PhysicalPerson> PhysicalPerson { get; set; }
         public DbSet<LegalPerson> LegalPerson { get; set; }
         public DbSet<Client> Client { get; set; }
@@ -31,7 +32,10 @@ namespace Mordomo.Data
         public DbSet<ServiceOrder> ServiceOrder { get; set; }
         public DbSet<Provider> Provider { get; set; }
         public DbSet<Menu> Menu { get; set; }
-        public DbSet<MenuItem> MenuItem { get; set; }        
+        public DbSet<MenuItem> MenuItem { get; set; }
+        public DbSet<Page> Page { get; set; }
+        public DbSet<Breadcrumb> Breadcrumb { get; set; }
+        public DbSet<BreadcrumbItem> BreadcrumbItem { get; set; }   
 
 
 
@@ -51,6 +55,7 @@ namespace Mordomo.Data
             modelBuilder.Configurations.Add(new Mapping.AndressTypeMap());
             modelBuilder.Configurations.Add(new Mapping.CityMap());
             modelBuilder.Configurations.Add(new Mapping.StateMap());
+            modelBuilder.Configurations.Add(new Mapping.CountryMap());
             modelBuilder.Configurations.Add(new Mapping.PhysicalPersonMap());
             modelBuilder.Configurations.Add(new Mapping.LegalPersonMap());            
             modelBuilder.Configurations.Add(new Mapping.ClientMap());
@@ -63,7 +68,10 @@ namespace Mordomo.Data
             modelBuilder.Configurations.Add(new Mapping.ServiceOrderMap());
             modelBuilder.Configurations.Add(new Mapping.ProviderMap());
             modelBuilder.Configurations.Add(new Mapping.MenuMap());
-            modelBuilder.Configurations.Add(new Mapping.MenuItemMap()); 
+            modelBuilder.Configurations.Add(new Mapping.MenuItemMap());
+            modelBuilder.Configurations.Add(new Mapping.PageMap());
+            modelBuilder.Configurations.Add(new Mapping.BreadcrumbMap());
+            modelBuilder.Configurations.Add(new Mapping.BreadcrumbItemMap()); 
         }
 
         public override int SaveChanges()

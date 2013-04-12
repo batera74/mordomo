@@ -185,6 +185,6 @@ $(window).load(function(){
 		ownerEmail:'#'
 	})
 	$('#message_form').forms({
-		ownerEmail:'#'
+	    ownerEmail: '#'
 	})
 })

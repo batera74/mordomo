@@ -42,15 +42,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business.cs" />
+    <Compile Include="Breadcrumb.cs" />
+    <Compile Include="IBreadcrumb.cs" />
     <Compile Include="CreditCard.cs" />
     <Compile Include="IBusiness.cs" />
     <Compile Include="ICreditCard.cs" />
     <Compile Include="ICreditCardType.cs" />
     <Compile Include="IMenu.cs" />
     <Compile Include="IMenuItem.cs" />
+    <Compile Include="IPage.cs" />
     <Compile Include="IUser.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="MenuItem.cs" />
+    <Compile Include="Page.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\IRepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

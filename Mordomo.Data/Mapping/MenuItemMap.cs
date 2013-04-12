@@ -21,6 +21,8 @@ namespace Mordomo.Data.Mapping
             //Relationships
             this.HasRequired(m => m.Menu);
 
+            this.HasRequired(m => m.Page);
+
             this.HasMany(s => s.SubItems);
 
             this.HasOptional(s => s.ParentMenuItem)

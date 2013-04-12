@@ -108,11 +108,8 @@
                     </div>
                 </div>
             </header>
-
-            <div class="container_12">
-                <asp:ContentPlaceHolder ID="Content" runat="server">
-                </asp:ContentPlaceHolder>
-            </div>
+            <asp:ContentPlaceHolder ID="Content" runat="server">
+            </asp:ContentPlaceHolder>
         </div>
         <!-- Footer -->
         <div class="bg-4">
@@ -166,10 +163,15 @@
                                         <span class="empty">*Esse campo é obrigatório.</span>
                                         <span class="pro_clear"></span>
                                     </label>
-                                    <div class="pro_buttons"><span><a class="pro_btn" data-type="reset">Limpar</a></span><span><a class="pro_btn" data-type="submit">Enviar</a></span></div>
+                                    <div class="pro_buttons">
+                                        <span><a class="pro_btn" data-type="reset">Limpar</a></span>
+                                        <span>                                            
+                                            <asp:LinkButton CssClass="pro_btn" data-type="submit" ID="LinkButton1" runat="server">Enviar</asp:LinkButton>
+                                        </span>
+                                    </div>
                                 </fieldset>
                             </div>
-
+                            
                         </article>
                     </div>
                 </aside>

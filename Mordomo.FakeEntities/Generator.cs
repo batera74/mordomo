@@ -35,7 +35,7 @@ namespace Mordomo.FakeEntities
             userNew.Active = true;
             userNew.Email = CreateEmail();
             userNew.Login = RandomString(20, false);
-            userNew.Password = RandomString(30, false);
+            userNew.Password = new byte[10];
             userNew.Phone = CreateRandomStringNumber(11);
             userNew.LastLogin = DateTime.Now;
             userNew.Verified = true;                        
@@ -58,9 +58,9 @@ namespace Mordomo.FakeEntities
 
         public static Entities.MenuItem CreateMenuItem(Entities.Menu menu, bool subItem, Entities.MenuItem parentMenuItem)
         {
-            var menuItemNew = new Entities.MenuItem();
+            var menuItemNew = new Entities.MenuItem(menu);
             menuItemNew.ItemText = RandomString(8, true);
-            menuItemNew.Hyperlink = RandomString(20, false) + ".aspx";
+            menuItemNew.Page = new Entities.Page();
             menuItemNew.Menu = menu;
             menuItemNew.ParentMenuItem = parentMenuItem;
             menu.MenuItems.Add(menuItemNew);            

@@ -83,7 +83,7 @@
                     var entity = entities[i];
                     if (entity.url == url && entity.expanded_url) {
                         url = entity.expanded_url;
-                        text = entity.display_url.substring(0, 30) + "...";
+                        text = entity.display_url.substring(0, 30);
                         break;
                     }
                 }

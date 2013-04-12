@@ -868,6 +868,12 @@ blockquote {
     margin: 0 0 0 3px;
 }
 /* with Icons */
+.pro_btn.pro_person span {
+    display: inline-block;
+    background: url(../images/icons/icons-light.png) -972px 0px;
+    margin: 0 7px 0 0;
+}
+
 .pro_btn.pro_sign-in span {
     display: inline-block;
     background: url(../images/icons/icons-light.png) -1116px -36px;

@@ -7,10 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Mordomo.Client.Dados {
+namespace Mordomo.Client.WebData {
     
     
-    public partial class CadastroUsuario {
+    public partial class UserRegistration {
+        
+        /// <summary>
+        /// hdnPersonType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnPersonType;
         
         /// <summary>
         /// breadCrumb control.
@@ -31,15 +40,6 @@ namespace Mordomo.Client.Dados {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// pnlPerson control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlPerson;
-        
-        /// <summary>
         /// lnkPhysicalPerson control.
         /// </summary>
         /// <remarks>
@@ -56,24 +56,6 @@ namespace Mordomo.Client.Dados {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnkLegalPerson;
-        
-        /// <summary>
-        /// pnlForm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlForm;
-        
-        /// <summary>
-        /// pnlPhysicalPerson control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlPhysicalPerson;
         
         /// <summary>
         /// txtName control.
@@ -148,15 +130,6 @@ namespace Mordomo.Client.Dados {
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton Radio2;
         
         /// <summary>
-        /// pnlLegalPerson control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlLegalPerson;
-        
-        /// <summary>
         /// txtFancyName control.
         /// </summary>
         /// <remarks>
@@ -184,22 +157,31 @@ namespace Mordomo.Client.Dados {
         protected global::System.Web.UI.WebControls.TextBox TextBox4;
         
         /// <summary>
-        /// pnlCommonData control.
+        /// txtPhoneAreaCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlCommonData;
+        protected global::System.Web.UI.WebControls.TextBox txtPhoneAreaCode;
         
         /// <summary>
-        /// txtPhone control.
+        /// TextBox6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPhone;
+        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        
+        /// <summary>
+        /// txtMobilePhoneAreaCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMobilePhoneAreaCode;
         
         /// <summary>
         /// txtMobilePhone control.
@@ -301,21 +283,12 @@ namespace Mordomo.Client.Dados {
         protected global::System.Web.UI.WebControls.DropDownList ddlAndressType;
         
         /// <summary>
-        /// Button1 control.
+        /// lnkEnviar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-        
-        /// <summary>
-        /// Button2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.LinkButton lnkEnviar;
     }
 }

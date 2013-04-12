@@ -19,7 +19,7 @@ namespace Mordomo.Entities
         public string Phone { get; set; }
         public string MobilePhone { get; set; }
         public string Login { get; set; }
-        public string Password { get; set; }        
+        public byte[] Password { get; set; }        
         public bool Verified { get; set; }
         public virtual List<CreditCard> CreditCards { get; set; }
         public virtual List<Andress> Andresses { get; set; }

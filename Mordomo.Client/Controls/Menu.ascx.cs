@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Practices.Unity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace Mordomo.Client.Controls
 {
-    public partial class Menu : System.Web.UI.UserControl
+    public partial class Menu : CustomUserControl
     {
         public string Name { get; set; }
 
@@ -15,11 +16,11 @@ namespace Mordomo.Client.Controls
         {
             if (!IsPostBack)
             {
-                var factory = new Data.RepositoryFactory();
-                var menuBiz = new Business.Menu(factory);
+                var menuBiz = base.container.Resolve<Business.IMenu>();
+                
                 string activePageName = Session["activePageName"].ToString();
 
-                Entities.Menu menu = menuBiz.Query(m => m.Name.Equals(Name), "MenuItems", "MenuItems.SubItems").FirstOrDefault();
+                Entities.Menu menu = menuBiz.Query(m => m.Name.Equals(Name), "MenuItems", "MenuItems.SubItems", "MenuItems.Page").FirstOrDefault();
 
                 if (menu != null)
                 {
@@ -28,9 +29,9 @@ namespace Mordomo.Client.Controls
                         string cssClass = "class=\"active\" ";
 
                         if (item.ItemText.ToLower().Equals(activePageName.ToLower()))
-                            ltlMenu.Text += "<li><a " + cssClass + "href=\"" + item.Hyperlink + "\">" + item.ItemText + "</a>";
+                            ltlMenu.Text += "<li><a " + cssClass + "href=\"" + item.Page.Link + "\">" + item.ItemText + "</a>";
                         else
-                            ltlMenu.Text += "<li><a href=\"" + item.Hyperlink + "\">" + item.ItemText + "</a>";
+                            ltlMenu.Text += "<li><a href=\"" + item.Page.Link + "\">" + item.ItemText + "</a>";
 
                         if (item.SubItems != null && item.SubItems.Count() > 0)
                         {

@@ -107,7 +107,7 @@
     <Content Include="css\smoothness\images\ui-icons_888888_256x240.png" />
     <Content Include="css\smoothness\jquery-ui-1.8.17.custom.css" />
     <Content Include="css\style.css" />
-    <Content Include="Dados\CadastroUsuario.aspx" />
+    <Content Include="WebData\UserRegistration.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="images\bg-1.gif" />
     <Content Include="images\bg-3.png" />
@@ -373,12 +373,16 @@
     <Content Include="js\jquery.hoverIntent.minified.js" />
     <Content Include="js\jquery.jplayer.min.js" />
     <Content Include="js\jquery.jqtransform.js" />
+    <Content Include="js\jquery.metadata.min.js" />
     <Content Include="js\jquery.prettyPhoto.js" />
     <Content Include="js\jquery.quicksand.js" />
     <Content Include="js\jquery.snippet.min.js" />
     <Content Include="js\jquery.tools.min.js" />
     <Content Include="js\jquery.tweet.js" />
+    <Content Include="js\jquery.validate.js" />
     <Content Include="js\kwicks-1.5.1.pack.js" />
+    <Content Include="js\mordomo.forms.js" />
+    <Content Include="js\mordomo.functions.js" />
     <Content Include="js\script.js" />
     <Content Include="js\superfish.js" />
     <Content Include="js\tms-0.4.1.js" />
@@ -403,6 +407,9 @@
     <Compile Include="Controls\BreadCrumb.ascx.designer.cs">
       <DependentUpon>BreadCrumb.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CustomUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Controls\Menu.ascx.cs">
       <DependentUpon>Menu.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -417,12 +424,12 @@
     <Compile Include="Controls\Slider.ascx.designer.cs">
       <DependentUpon>Slider.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Dados\CadastroUsuario.aspx.cs">
-      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
+    <Compile Include="WebData\UserRegistration.aspx.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dados\CadastroUsuario.aspx.designer.cs">
-      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
+    <Compile Include="WebData\UserRegistration.aspx.designer.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

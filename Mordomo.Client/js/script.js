@@ -13,15 +13,18 @@ $.include('/js/jquery-ui-1.8.17.custom.min.js')
 $.include('/js/jquery.cycle.all.min.js')
 $.include('/js/jquery.cookie.js')
 $.include('/js/forms.js')
+$.include('/js/jquery.validate.js')
+$.include('/js/jquery.metadata.min.js')
+$.include('/js/mordomo.functions.js')
 $(function(){
 	$('#datepicker').datepicker({inline: true});
 	$('.soc_list li a').hover(function(){$(this).stop().animate({paddingBottom:'5px',marginTop:'-5px'},200)},function(){$(this).stop().animate({paddingBottom:'0', marginTop:'0'},200)})
 	if($('.tweet').length)$.include('/js/jquery.tweet.js');
-	if($('.lightbox-image-1').length)$.include('/js/jquery.prettyPhoto.js');
-	if($('#message_form').length)$.include('/js/forms.js');
+	if($('.lightbox-image-1').length)$.include('/js/jquery.prettyPhoto.js');	
 	if($('.pro_tweet').length)$.include('/js/jquery.tweet.js');
 	if($('.lightbox-image').length)$.include('/js/jquery.prettyPhoto.js');
 	if ($('#pro_contact-form').length) $.include('/js/forms.js');
+	if ($('#message_form').length) $.include('/js/forms.js');
 	if($('.pro_kwicks').length)$.include('/js/kwicks-1.5.1.pack.js');
 	if($('#pro_counter').length)$.include('/js/jquery.countdown.js');
 	if($('.fixedtip').length||$('.clicktip').length||$('.normaltip').length)$.include('/js/jquery.atooltip.pack.js')
@@ -53,7 +56,7 @@ $(function(){
 	$(".pro_tabs-vert-right ul.pro_tabs-nav").tabs(".pro_tabs-vert-right .pro_tab-content");	
 // Forms
 	$('#pro_form2').jqTransform({ imgPath: 'images/' });
-	$('#pro_contact-form').jqTransform({ imgPath: 'images/' });	
+	$('#pro_contact-form').jqTransform({ imgPath: 'images/' });
 // Carausel
 	$('.pro_list-car').uCarousel({show:4,buttonClass:'pro_car-button', pageStep:1, shift:false})
 	$('.pro_carousel').uCarousel({show:4,buttonClass:'pro_car-button'})
@@ -155,30 +158,3 @@ $(function(){
 function onAfter(curr, next, opts, fwd){var $ht=$(this).height();$(this).parent().animate({height:$ht})}
 
 
-//jqTransform Fix
-
-function fixJqForm(formName, partialLoad) {
-    if (partialLoad) {
-        fixSelect($(formName));
-        $(formName).jqTransform({ imgPath: 'images/' });
-    }
-}
-
-function fixSelect(selector) {
-    selectedVal = $(selector).children(':selected').val();
-    $(selector).children('option').removeAttr('selected');
-    $(selector).children('option[value="' + selectedVal + '"]').attr('selected', 'selected');
-
-    $(selector).removeClass('jqTransformHidden');
-    $(selector).css('display', 'block');
-    $(selector).prev('ul').remove();
-    $(selector).prev('div.selectWrapper').remove();
-
-    var selectElm = $(selector).closest('.jqTransformSelectWrapper').html();
-
-    $(selector).closest('.jqTransformSelectWrapper').after(selectElm);
-    $(selector).closest('.jqTransformSelectWrapper').remove();
-
-    $(selector).closest('form').removeClass('jqtransformdone');
-    $(selector).closest('form').jqTransform();
-}
