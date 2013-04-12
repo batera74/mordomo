@@ -13,6 +13,7 @@ namespace Mordomo.Entities
         }
 
         public string Name { get; set; }
+        public string Acronym { get; set; }
         public virtual List<State> States { get; set; }
     }
 }

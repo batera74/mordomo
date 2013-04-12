@@ -13,7 +13,7 @@ $.include('/js/jquery-ui-1.8.17.custom.min.js')
 $.include('/js/jquery.cycle.all.min.js')
 $.include('/js/jquery.cookie.js')
 $.include('/js/forms.js')
-$.include('/js/jquery.validate.js')
+$.include('/js/jquery.validate.min.js')
 $.include('/js/jquery.metadata.min.js')
 $.include('/js/mordomo.functions.js')
 $(function(){

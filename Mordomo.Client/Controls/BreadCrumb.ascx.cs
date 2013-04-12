@@ -29,18 +29,16 @@ namespace Mordomo.Client.Controls
 
                     foreach (var item in bread.BreadcrumbItems.OrderBy(b => b.Order))
                     {
-                        string cssClass = "class=\"current\" ";
-
                         if (item.Order == actualOrder)
                         {
-                            lblBreadcrumb.Text += "<li><a " + cssClass + "\">" + item.Page.Name + "</a>";
+                            lblBreadcrumb.Text += "<li><a class=\"current\">" + item.Page.Name + "</a>";
                         }
                         else
                         {
                             if(item.Order < actualOrder)
                                 lblBreadcrumb.Text += "<li><a href=\"" + item.Page.Link + "\">" + item.Page.Name + "</a>";
                             else
-                                lblBreadcrumb.Text += "<li><a>" + item.Page.Name + "</a>";
+                                lblBreadcrumb.Text += "<li><a class=\"after\">" + item.Page.Name + "</a>";
                         }
                     }
                 }

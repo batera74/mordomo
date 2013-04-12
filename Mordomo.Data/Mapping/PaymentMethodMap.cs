@@ -22,8 +22,7 @@ namespace Mordomo.Data.Mapping
 
             // Table & Column Mappings
             this.ToTable("PaymentMethod");
-            this.Property(e => e.Id).HasColumnName("PaymentMethod_Id");            
-            this.Property(e => e.Name).HasColumnName("Name");
+            this.Property(e => e.Id).HasColumnName("PaymentMethod_Id");    
         }
     }
 }

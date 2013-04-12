@@ -19,6 +19,7 @@ namespace Mordomo.Data
         public DbSet<Andress> Andress { get; set; }
         public DbSet<City> City { get; set; }
         public DbSet<State> State { get; set; }
+        public DbSet<PaymentMethod> PaymentMethod { get; set; }
         public DbSet<Country> Country { get; set; }
         public DbSet<PhysicalPerson> PhysicalPerson { get; set; }
         public DbSet<LegalPerson> LegalPerson { get; set; }
@@ -40,10 +41,10 @@ namespace Mordomo.Data
 
 
         public MordomoContext()
-            : base("Mordomo2")
+            : base("Mordomo")
         {
-            //Database.SetInitializer<MordomoContext>(new CreateMySqlDatabaseIfNotExists<DbContext>());          
-            Database.SetInitializer<MordomoContext>(new CreateDatabaseIfNotExists<DbContext>());          
+            Database.SetInitializer<MordomoContext>(new CreateMySqlDatabaseIfNotExists<DbContext>());          
+            //Database.SetInitializer<MordomoContext>(new CreateDatabaseIfNotExists<DbContext>());          
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -56,6 +57,7 @@ namespace Mordomo.Data
             modelBuilder.Configurations.Add(new Mapping.CityMap());
             modelBuilder.Configurations.Add(new Mapping.StateMap());
             modelBuilder.Configurations.Add(new Mapping.CountryMap());
+            modelBuilder.Configurations.Add(new Mapping.PaymentMethodMap());
             modelBuilder.Configurations.Add(new Mapping.PhysicalPersonMap());
             modelBuilder.Configurations.Add(new Mapping.LegalPersonMap());            
             modelBuilder.Configurations.Add(new Mapping.ClientMap());

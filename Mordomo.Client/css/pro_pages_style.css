@@ -1037,6 +1037,7 @@ blockquote {
         #pro_breadcrumbs-four .current::before {
             content: normal;
         }
+
 /*-----------------------------------*/
 #pro_breadcrumbs-two {
     overflow: hidden;
@@ -1080,6 +1081,7 @@ blockquote {
             border-color: #b3d3e8 #b3d3e8 #b3d3e8 transparent;
         }
 
+
         #pro_breadcrumbs-two a::after {
             content: "";
             position: absolute;
@@ -1094,6 +1096,32 @@ blockquote {
         #pro_breadcrumbs-two a:hover::after {
             border-left-color: #b3d3e8;
         }
+
+
+    /****** Customizing ******/
+    #pro_breadcrumbs-two .current,
+    #pro_breadcrumbs-two .current:hover {        
+        color: #444;
+        cursor: default;
+    }
+
+
+    #pro_breadcrumbs-two .after,
+    #pro_breadcrumbs-two .after:hover {
+        background: #ddd;
+        color: #444;
+        cursor: default;
+    }
+
+        #pro_breadcrumbs-two .after:hover::before {
+            border-color: #ddd #ddd #ddd transparent;
+        }
+
+        #pro_breadcrumbs-two .after:hover::after {
+            border-left-color: #ddd;
+        }
+
+
 /* ------------------------------------------- */
 #pro_breadcrumbs-four {
     overflow: hidden;

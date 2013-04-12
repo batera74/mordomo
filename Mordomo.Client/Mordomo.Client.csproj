@@ -107,6 +107,7 @@
     <Content Include="css\smoothness\images\ui-icons_888888_256x240.png" />
     <Content Include="css\smoothness\jquery-ui-1.8.17.custom.css" />
     <Content Include="css\style.css" />
+    <Content Include="js\jquery.validate.min.js" />
     <Content Include="WebData\UserRegistration.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="images\bg-1.gif" />
@@ -379,7 +380,6 @@
     <Content Include="js\jquery.snippet.min.js" />
     <Content Include="js\jquery.tools.min.js" />
     <Content Include="js\jquery.tweet.js" />
-    <Content Include="js\jquery.validate.js" />
     <Content Include="js\kwicks-1.5.1.pack.js" />
     <Content Include="js\mordomo.forms.js" />
     <Content Include="js\mordomo.functions.js" />
@@ -391,6 +391,7 @@
     <Content Include="skin\blue.monday\jplayer.blue.monday.jpg" />
     <Content Include="skin\blue.monday\jplayer.blue.monday.video.play.png" />
     <Content Include="Web.config" />
+    <Content Include="WebService\CascadingDropDown.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\Access.ascx.cs">
@@ -446,6 +447,10 @@
       <DependentUpon>Default.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebService\CascadingDropDown.asmx.cs">
+      <DependentUpon>CascadingDropDown.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\icomoon-webfont.woff" />

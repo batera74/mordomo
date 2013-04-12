@@ -27,6 +27,8 @@ namespace Mordomo.Data.Mapping
             this.HasRequired(s => s.Status)
                 .WithMany();
 
+            this.HasRequired(s => s.PaymentMethod);                
+
             this.HasMany(s => s.ServiceOrderItems)
                 .WithMany(si => si.ServiceOrders);              
         }

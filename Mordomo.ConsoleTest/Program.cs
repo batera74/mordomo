@@ -18,7 +18,8 @@ namespace Mordomo.ConsoleTest
         {
             container = new UnityContainer();
             container.LoadConfiguration();
-            QueryBreadcrumb(1);
+            CreateMenu();
+            CreateBreadcrumb();
         }
 
         public static void CreateMenu()
@@ -72,7 +73,7 @@ namespace Mordomo.ConsoleTest
             var breadcrumbBiz = container.Resolve<Business.IBreadcrumb>();
 
             Entities.Breadcrumb breadcrumb = new Entities.Breadcrumb();
-            breadcrumb.Name = "UserRegistration";
+            breadcrumb.Name = "Cadastro";
 
             //var breadcrumb = breadcrumbBiz.Query(b => b.Id == 1, "BreadcrumbItems").First();
 
@@ -81,9 +82,13 @@ namespace Mordomo.ConsoleTest
             Entities.BreadcrumbItem breadItem3 = new Entities.BreadcrumbItem(breadcrumb);
             Entities.BreadcrumbItem breadItem4 = new Entities.BreadcrumbItem(breadcrumb);
             breadItem1.Page = new Entities.Page() { Name = "Cadastro", Link = "UserRegistration.aspx" };
+            breadItem1.Order = 1;
             breadItem2.Page = new Entities.Page() { Name = "Escolher do Plano", Link = "ChoosePlan.aspx" };
+            breadItem1.Order = 2;
             breadItem3.Page = new Entities.Page() { Name = "Dados do Pagamento", Link = "PaymentData.aspx" };
+            breadItem1.Order = 3;
             breadItem4.Page = new Entities.Page() { Name = "Confirmação", Link = "ConfirmRegistration.aspx" };
+            breadItem1.Order = 4;
 
             breadcrumb.BreadcrumbItems.Add(breadItem1);
             breadcrumb.BreadcrumbItems.Add(breadItem2);

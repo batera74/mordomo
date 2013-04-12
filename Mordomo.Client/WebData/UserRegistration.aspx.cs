@@ -18,20 +18,5 @@ namespace Mordomo.Client.WebData
                 
             }
         }
-
-        protected void lnkPhysicalPerson_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        protected void lnkLegalPerson_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void ChangePersonFormVisibility(Panel personTypePanel)
-        {
-            
-        }
     }
 }

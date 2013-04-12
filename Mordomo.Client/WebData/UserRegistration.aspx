@@ -3,13 +3,12 @@
 <%@ Register TagPrefix="uc" TagName="BreadCrumb" Src="~/Controls/BreadCrumb.ascx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
-    <script src="/js/mordomo.forms.js"></script>
     <script type="text/javascript">
 
         $(function () {
             changeControlVisibility("pnlForm", "hide");
             $('#changePerson').click(function () { changePerson(); return false; });
-        });        
+        });
 
 
         function showForm(personType) {
@@ -33,6 +32,18 @@
         function changePerson() {
             changeControlVisibility("pnlPerson", "show");
             changeControlVisibility("pnlForm", "hide");
+        }
+
+        function InitializeValidation() {
+            var validator = $("#pnlForm").bind("invalid-form.validate", function () { }).validate({
+                errorElement: "em",
+                errorPlacement: function (error, element) {
+                    error.appendTo(element.parent("td").next("td"));
+                },
+                success: function (label) {
+                    label.text("ok!").addClass("success");
+                }
+            });
         }
 
     </script>
@@ -75,18 +86,12 @@
                                         <span class="pro_text-form">Nome:</span>
                                         <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
                                         <div class="d-in-block">
-                                            <span class="error">*Esse não é um nome valido.</span>
-                                            <span class="empty">*Esse campo é obrigatório.</span>
-                                            <span class="pro_clear"></span>
                                         </div>
                                     </label>
                                     <label class="name">
                                         <span class="pro_text-form">Sobrenome:</span>
                                         <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
                                         <div class="d-in-block">
-                                            <span class="error">*Esse não é um nome valido.</span>
-                                            <span class="empty">*Esse campo é obrigatório.</span>
-                                            <span class="pro_clear"></span>
                                         </div>
                                     </label>
                                     <label>
@@ -99,9 +104,6 @@
                                         <span class="pro_text-form">CPF:</span>
                                         <asp:TextBox ID="txtCPF" runat="server"></asp:TextBox>
                                         <div class="d-in-block">
-                                            <span class="error">*Esse não é um cpf valido.</span>
-                                            <span class="empty">*Esse campo é obrigatório.</span>
-                                            <span class="pro_clear"></span>
                                         </div>
                                     </label>
                                     <label>
@@ -113,8 +115,6 @@
                                             <input id="Radio2" type="radio" name="group1" runat="server"><div class="pro_text-form2 fleft">Feminino</div>
                                         </div>
                                         <div class="d-in-block">
-                                            <span class="empty">*Esse campo é obrigatório.</span>
-                                            <span class="pro_clear"></span>
                                         </div>
                                     </label>
                                 </div>
@@ -128,27 +128,18 @@
                                         <span class="pro_text-form">Nome Fantasia:</span>
                                         <asp:TextBox ID="txtFancyName" runat="server"></asp:TextBox>
                                         <div class="d-in-block">
-                                            <span class="error">*Esse não é um nome valido.</span>
-                                            <span class="empty">*Esse campo é obrigatório.</span>
-                                            <span class="pro_clear"></span>
                                         </div>
                                     </label>
                                     <label>
                                         <span class="pro_text-form">Razão Social:</span>
                                         <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
                                         <div class="d-in-block">
-                                            <span class="error">*Esse não é um nome valido.</span>
-                                            <span class="empty">*Esse campo é obrigatório.</span>
-                                            <span class="pro_clear"></span>
                                         </div>
                                     </label>
                                     <label>
                                         <span class="pro_text-form">CNPJ:</span>
                                         <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
                                         <div class="d-in-block">
-                                            <span class="error">*Esse não é um cnpj valido.</span>
-                                            <span class="empty">*Esse campo é obrigatório.</span>
-                                            <span class="pro_clear"></span>
                                         </div>
                                     </label>
                                 </div>
@@ -161,9 +152,6 @@
                                         <asp:TextBox ID="txtPhoneAreaCode" runat="server" Width="20px"></asp:TextBox>
                                         <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
                                         <div class="d-in-block">
-                                            <span class="error">*Esse não é um telefone valido.</span>
-                                            <span class="empty">*Esse campo é obrigatório.</span>
-                                            <span class="pro_clear"></span>
                                         </div>
                                     </label>
 
@@ -172,9 +160,6 @@
                                         <asp:TextBox ID="txtMobilePhoneAreaCode" runat="server" Width="20px"></asp:TextBox>
                                         <asp:TextBox ID="txtMobilePhone" runat="server"></asp:TextBox>
                                         <div class="d-in-block">
-                                            <span class="error">*Esse não é um celular valido.</span>
-                                            <span class="empty">*Esse campo é obrigatório.</span>
-                                            <span class="pro_clear"></span>
                                         </div>
                                     </label>
 
@@ -184,10 +169,7 @@
                                     <label>
                                         <span class="pro_text-form">E-mail:</span>
                                         <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-                                         <div class="d-in-block">
-                                            <span class="error">*Esse não é um email valido.</span>
-                                            <span class="empty">*Esse campo é obrigatório.</span>
-                                            <span class="pro_clear"></span>
+                                        <div class="d-in-block">
                                         </div>
 
                                     </label>
@@ -209,35 +191,37 @@
                                     </label>
                                     <label>
                                         <span class="pro_text-form">Número:</span>
-                                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtNumber" runat="server"></asp:TextBox>
                                     </label>
                                     <label>
                                         <span class="pro_text-form">Complemento:</span>
-                                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtComplement" runat="server"></asp:TextBox>
                                     </label>
                                     <label>
                                         <span class="pro_text-form">CEP:</span>
-                                        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtPostalCode" runat="server"></asp:TextBox>
                                     </label>
                                     <label>
                                         <span class="pro_text-form fleft">Estado:</span>
-                                        <asp:DropDownList ID="DropDownList1" runat="server">
-                                            <asp:ListItem>São Paulo</asp:ListItem>
-                                            <asp:ListItem>Rio de Janeiro</asp:ListItem>
-                                        </asp:DropDownList>
+                                        <ajaxToolkit:CascadingDropDown ID="cc1" runat="server" PromptText="UF..." PromptValue="0"
+                                            ServicePath="/WebService/CascadingDropDown.asmx" ServiceMethod="GetStates"
+                                            TargetControlID="ddlState" Category="State"/>
+                                        </ajaxToolkit:CascadingDropDown>        
+                                        <asp:DropDownList ID="ddlState" Style="height: 50px;" runat="server">
+                                        </asp:DropDownList>                                
                                     </label>
                                     <label>
                                         <span class="pro_text-form fleft">Cidade:</span>
+                                        <ajaxToolkit:CascadingDropDown ID="cc2" runat="server" PromptText="Cidade..." PromptValue="0"
+                                            ServicePath="/WebService/CascadingDropDown.asmx" ServiceMethod="GetCities"
+                                            TargetControlID="ddlCity" Category="City" ParentControlID="State"/>
+                                        </ajaxToolkit:CascadingDropDown>    
                                         <asp:DropDownList ID="ddlCity" runat="server">
-                                            <asp:ListItem>São Paulo</asp:ListItem>
-                                            <asp:ListItem>Rio de Janeiro</asp:ListItem>
                                         </asp:DropDownList>
                                     </label>
                                     <label>
                                         <span class="pro_text-form fleft">Tipo de Endereço:</span>
                                         <asp:DropDownList ID="ddlAndressType" runat="server">
-                                            <asp:ListItem>Comercial</asp:ListItem>
-                                            <asp:ListItem>Residencial</asp:ListItem>
                                         </asp:DropDownList>
                                     </label>
                                 </div>
@@ -260,6 +244,6 @@
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
-    </section>
+        </section>
     </div>
 </asp:Content>

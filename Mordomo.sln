@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mordomo.Payment", "Mordomo.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mordomo.FakeEntities", "Mordomo.FakeEntities\Mordomo.FakeEntities.csproj", "{2932B8A2-6E06-43FA-AE5E-27E76350BC7C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{289C4DDE-0697-4ABE-80D5-7C267AA12309}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
