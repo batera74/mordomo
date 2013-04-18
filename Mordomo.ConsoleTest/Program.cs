@@ -84,11 +84,11 @@ namespace Mordomo.ConsoleTest
             breadItem1.Page = new Entities.Page() { Name = "Cadastro", Link = "UserRegistration.aspx" };
             breadItem1.Order = 1;
             breadItem2.Page = new Entities.Page() { Name = "Escolher do Plano", Link = "ChoosePlan.aspx" };
-            breadItem1.Order = 2;
+            breadItem2.Order = 2;
             breadItem3.Page = new Entities.Page() { Name = "Dados do Pagamento", Link = "PaymentData.aspx" };
-            breadItem1.Order = 3;
+            breadItem3.Order = 3;
             breadItem4.Page = new Entities.Page() { Name = "Confirmação", Link = "ConfirmRegistration.aspx" };
-            breadItem1.Order = 4;
+            breadItem4.Order = 4;
 
             breadcrumb.BreadcrumbItems.Add(breadItem1);
             breadcrumb.BreadcrumbItems.Add(breadItem2);

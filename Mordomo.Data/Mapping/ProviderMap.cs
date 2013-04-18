@@ -1,9 +1,8 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,20 +11,27 @@ namespace Mordomo.Data.Mapping
         public ProviderMap()
         {
             // Primary Key
-            this.HasKey(p => p.Id);
+            this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(p => p.EncryptedLogo)
+            this.Property(t => t.EncryptedLogo)
                 .IsRequired();
 
             // Table & Column Mappings
             this.ToTable("Provider");
-            this.Property(p => p.Id).HasColumnName("Provider_Id");
-            this.Property(p => p.EncryptedLogo).HasColumnName("EncryptedLogo");
+            this.Property(t => t.Id).HasColumnName("Provider_Id");
+            this.Property(t => t.EncryptedLogo).HasColumnName("EncryptedLogo");
 
             // Relationships
-            this.HasMany(f => f.Services)
-                .WithMany(s => s.Providers);
+            this.HasMany(t => t.Services)
+                .WithMany(t => t.Providers)
+                .Map(m =>
+                    {
+                        m.ToTable("ProviderService");
+                        m.MapLeftKey("Provider_Id");
+                        m.MapRightKey("Service_Id");
+                    });
+            
         }
     }
 }

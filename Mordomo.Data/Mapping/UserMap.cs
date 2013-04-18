@@ -1,9 +1,8 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,45 +11,22 @@ namespace Mordomo.Data.Mapping
         public UserMap()
         {
             // Primary Key
-            this.HasKey(u => u.Id);
+            this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(u => u.Email)
-                .IsRequired()
-                .HasMaxLength(255);
-
-            this.Property(u => u.Active)
-                .IsRequired();
-
-            this.Property(u => u.LastLogin)
-                .IsRequired();
-
-            this.Property(u => u.Phone)
-                .IsRequired()
-                .HasMaxLength(10);
-
-            this.Property(u => u.MobilePhone)
-                .IsRequired()
-                .HasMaxLength(11);
-
-            this.Property(u => u.Login)
-                .IsRequired()
-                .HasMaxLength(50);
-
-            this.Property(u => u.Password)
-                .IsRequired();
-
-            this.Property(u => u.Verified)
-                .IsRequired();
-
             // Table & Column Mappings
             this.ToTable("User");
-            this.Property(u => u.Id).HasColumnName("User_Id");
-
-            //Relationships
-            this.HasMany(u => u.Andresses)
-                .WithRequired(a => a.User)
-                .WillCascadeOnDelete();
+            this.Property(t => t.Id).HasColumnName("User_Id");
+            this.Property(t => t.Email).HasColumnName("Email");
+            this.Property(t => t.Active).HasColumnName("Active");
+            this.Property(t => t.LastLogin).HasColumnName("LastLogin");
+            this.Property(t => t.Phone).HasColumnName("Phone");
+            this.Property(t => t.MobilePhone).HasColumnName("MobilePhone");
+            this.Property(t => t.Login).HasColumnName("Login");
+            this.Property(t => t.Password).HasColumnName("Password");
+            this.Property(t => t.Verified).HasColumnName("Verified");
+            this.Property(t => t.CreationTime).HasColumnName("CreationTime");
+            this.Property(t => t.LastUpdate).HasColumnName("LastUpdate");
         }
     }
 }

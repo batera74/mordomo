@@ -1,9 +1,7 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,29 +10,29 @@ namespace Mordomo.Data.Mapping
         public CreditMap()
         {
             // Primary Key
-            this.HasKey(c => c.Id);
+            this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(c => c.CreditDate)
-                .IsRequired();
-
-            this.Property(c => c.ExpirationDate)
-                .IsRequired();
-
-            this.Property(c => c.Used)
-                .IsRequired();
-
-            this.Property(c => c.CreditReason)
+            this.Property(t => t.CreditReason)
                 .IsRequired()
                 .HasMaxLength(100);
 
             // Table & Column Mappings
             this.ToTable("Credit");
-            this.Property(c => c.Id).HasColumnName("Credit_Id");
-            this.Property(c => c.CreditDate).HasColumnName("CreditDate");
-            this.Property(c => c.ExpirationDate).HasColumnName("ExpirationDate");
-            this.Property(c => c.Used).HasColumnName("Used");
-            this.Property(c => c.CreditReason).HasColumnName("CreditReason");
+            this.Property(t => t.Id).HasColumnName("Credit_Id");
+            this.Property(t => t.CreditDate).HasColumnName("CreditDate");
+            this.Property(t => t.ExpirationDate).HasColumnName("ExpirationDate");
+            this.Property(t => t.Used).HasColumnName("Used");
+            this.Property(t => t.CreditReason).HasColumnName("CreditReason");
+            this.Property(t => t.CreationTime).HasColumnName("CreationTime");
+            this.Property(t => t.LastUpdate).HasColumnName("LastUpdate");
+            this.Property(t => t.Account_Id).HasColumnName("Account_Id");
+
+            // Relationships
+            this.HasRequired(t => t.Account)
+                .WithMany(t => t.Credits)
+                .HasForeignKey(d => d.Account_Id);
+
         }
     }
 }

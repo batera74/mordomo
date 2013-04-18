@@ -9,5 +9,7 @@ namespace Mordomo.Entities
     {
         public string Name { get; set; }
         public string Link { get; set; }
+        public virtual List<BreadcrumbItem> BreadcrumbItems { get; set; }
+        public virtual List<MenuItem> MenuItems { get; set; }
     }
 }

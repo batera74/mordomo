@@ -1,9 +1,7 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,16 +10,12 @@ namespace Mordomo.Data.Mapping
         public MenuMap()
         {
             // Primary Key
-            this.HasKey(p => p.Id);
+            this.HasKey(t => t.Id);
 
+            // Properties
             // Table & Column Mappings
             this.ToTable("Menu");
-            this.Property(p => p.Id).HasColumnName("Menu_Id");       
-
-            //Relationships
-            this.HasMany(m => m.MenuItems)
-                .WithRequired(mi => mi.Menu)
-                .WillCascadeOnDelete();
+            this.Property(t => t.Id).HasColumnName("Menu_Id");
         }
     }
 }

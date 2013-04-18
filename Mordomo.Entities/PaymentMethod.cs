@@ -8,5 +8,6 @@ namespace Mordomo.Entities
     public class PaymentMethod : EntityBase
     {        
         public string Name { get; set; }
+        public List<ServiceOrder> ServiceOrders { get; set; }
     }
 }

@@ -1,9 +1,7 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,21 +10,25 @@ namespace Mordomo.Data.Mapping
         public AccountMap()
         {
             // Primary Key
-            this.HasKey(c => c.Id);
+            this.HasKey(t => t.Id);
+
+            // Properties
 
             // Table & Column Mappings
             this.ToTable("Account");
-            this.Property(c => c.Id).HasColumnName("Account_Id");
+            this.Property(t => t.Id).HasColumnName("Account_Id");
+            this.Property(t => t.CreationTime).HasColumnName("CreationTime");
+            this.Property(t => t.LastUpdate).HasColumnName("LastUpdate");
+            this.Property(t => t.Plan_Id).HasColumnName("Plan_Id");
 
             // Relationships
-            this.HasRequired(a => a.Plan)
-                .WithMany(p => p.Accounts);
+            this.HasRequired(t => t.Client)
+                .WithOptional(t => t.Account);
 
-            this.HasMany(a => a.AccountMovements)
-                .WithRequired(am => am.Account);
+            this.HasRequired(t => t.Plan)
+                .WithMany(t => t.Accounts)
+                .HasForeignKey(d => d.Plan_Id);
 
-            this.HasMany(a => a.Credits)
-                .WithRequired(c => c.Account);
         }
     }
 }

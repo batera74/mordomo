@@ -101,9 +101,9 @@ namespace Mordomo.Data
 
             foreach (var property in typeGeneric.GetProperties())
             {
-                if (IsEntityProperty(property))
+                if (IsEntityProperty(property) && property.PropertyType != typeof(Byte[]))
                 {   
-                    if (property.PropertyType.IsArray || property.GetValue(entity, null) is IEnumerable<object>)
+                    if(property.PropertyType.IsArray || property.GetValue(entity, null) is IEnumerable<object>)
                     {
                         IEnumerable<object> itensOfArray = (IEnumerable<object>)property.GetValue(entity, null);
 

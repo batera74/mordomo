@@ -19,8 +19,11 @@ namespace Mordomo.Entities
 
         public string ItemText { get; set; }
         public virtual Page Page { get; set; }
+        public int Page_Id { get; set; }
         public virtual List<MenuItem> SubItems { get; set; }
         public virtual Menu Menu { get; set; }
+        public int Menu_Id { get; set; }
         public virtual MenuItem ParentMenuItem { get; set; }
+        public int? ParentMenuItem_Id { get; set; }
     }
 }

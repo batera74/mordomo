@@ -1,9 +1,7 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,28 +10,35 @@ namespace Mordomo.Data.Mapping
         public LegalPersonMap()
         {
             // Primary Key
-            this.HasKey(p =>p.Id);
+            this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(p =>p.FancyName)
+
+            this.Property(t => t.FancyName)
                 .IsRequired()
                 .HasMaxLength(100);
 
-            this.Property(p =>p.CorporateName)
-               .IsRequired()
-               .HasMaxLength(100);
+            this.Property(t => t.CorporateName)
+                .IsRequired()
+                .HasMaxLength(100);
 
-            this.Property(p =>p.CNPJ)
-               .IsRequired()
-               .HasMaxLength(14);
+            this.Property(t => t.CNPJ)
+                .IsRequired()
+                .HasMaxLength(14);
 
             // Table & Column Mappings
             this.ToTable("LegalPerson");
-            this.Property(p => p.Id).HasColumnName("LegalPerson_Id");            
+            this.Property(t => t.Id).HasColumnName("LegalPerson_Id");
+            this.Property(t => t.FancyName).HasColumnName("FancyName");
+            this.Property(t => t.CorporateName).HasColumnName("CorporateName");
+            this.Property(t => t.CNPJ).HasColumnName("CNPJ");
+            this.Property(t => t.CreationTime).HasColumnName("CreationTime");
+            this.Property(t => t.LastUpdate).HasColumnName("LastUpdate");
 
-            //Relationships
-            this.HasRequired(p => p.User)
-                .WithOptional(u => u.LegalPerson);
+            // Relationships
+            this.HasRequired(t => t.User)
+                .WithOptional(t => t.LegalPerson);
+
         }
     }
 }

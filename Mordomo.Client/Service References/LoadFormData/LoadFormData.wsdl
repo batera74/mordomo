@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetStates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="knownCategoryValues" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStatesResult" type="tns:ArrayOfCascadingDropDownNameValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCascadingDropDownNameValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CascadingDropDownNameValue" nillable="true" type="tns:CascadingDropDownNameValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CascadingDropDownNameValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="value" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="isDefaultValue" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="optionTitle" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCities">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="knownCategoryValues" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCitiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCitiesResult" type="tns:ArrayOfCascadingDropDownNameValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStates2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="promptText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStates2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStates2Result" type="tns:ArrayOfDropDownData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDropDownData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DropDownData" nillable="true" type="tns:DropDownData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DropDownData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCities2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="stateId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="promptText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCities2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCities2Result" type="tns:ArrayOfDropDownData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAndressTypes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="promptText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAndressTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAndressTypesResult" type="tns:ArrayOfDropDownData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetStatesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStates" />
+  </wsdl:message>
+  <wsdl:message name="GetStatesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCities" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStates2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetStates2" />
+  </wsdl:message>
+  <wsdl:message name="GetStates2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetStates2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetCities2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCities2" />
+  </wsdl:message>
+  <wsdl:message name="GetCities2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCities2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetAndressTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAndressTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetAndressTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAndressTypesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LoadFormDataSoap">
+    <wsdl:operation name="GetStates">
+      <wsdl:input message="tns:GetStatesSoapIn" />
+      <wsdl:output message="tns:GetStatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <wsdl:input message="tns:GetCitiesSoapIn" />
+      <wsdl:output message="tns:GetCitiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStates2">
+      <wsdl:input message="tns:GetStates2SoapIn" />
+      <wsdl:output message="tns:GetStates2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCities2">
+      <wsdl:input message="tns:GetCities2SoapIn" />
+      <wsdl:output message="tns:GetCities2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAndressTypes">
+      <wsdl:input message="tns:GetAndressTypesSoapIn" />
+      <wsdl:output message="tns:GetAndressTypesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LoadFormDataSoap" type="tns:LoadFormDataSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStates">
+      <soap:operation soapAction="http://tempuri.org/GetStates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <soap:operation soapAction="http://tempuri.org/GetCities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStates2">
+      <soap:operation soapAction="http://tempuri.org/GetStates2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCities2">
+      <soap:operation soapAction="http://tempuri.org/GetCities2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAndressTypes">
+      <soap:operation soapAction="http://tempuri.org/GetAndressTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LoadFormDataSoap12" type="tns:LoadFormDataSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStates">
+      <soap12:operation soapAction="http://tempuri.org/GetStates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <soap12:operation soapAction="http://tempuri.org/GetCities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStates2">
+      <soap12:operation soapAction="http://tempuri.org/GetStates2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCities2">
+      <soap12:operation soapAction="http://tempuri.org/GetCities2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAndressTypes">
+      <soap12:operation soapAction="http://tempuri.org/GetAndressTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LoadFormData">
+    <wsdl:port name="LoadFormDataSoap" binding="tns:LoadFormDataSoap">
+      <soap:address location="http://localhost:63633/WebService/LoadFormData.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LoadFormDataSoap12" binding="tns:LoadFormDataSoap12">
+      <soap12:address location="http://localhost:63633/WebService/LoadFormData.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

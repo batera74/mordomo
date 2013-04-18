@@ -9,6 +9,5 @@ C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.Infrastructure\obj\Debug\M
 C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.Infrastructure\obj\Debug\Mordomo.Infrastructure.csprojResolveAssemblyReference.cache
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.Infrastructure\bin\Debug\Mordomo.Infrastructure.dll
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.Infrastructure\bin\Debug\Mordomo.Infrastructure.pdb
-C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.Infrastructure\obj\Debug\Mordomo.Infrastructure.csprojResolveAssemblyReference.cache
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.Infrastructure\obj\Debug\Mordomo.Infrastructure.dll
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.Infrastructure\obj\Debug\Mordomo.Infrastructure.pdb

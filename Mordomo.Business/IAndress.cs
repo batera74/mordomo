@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Mordomo.Entities
+namespace Mordomo.Business
 {
-    public class Cliente : Pessoa
+    public interface IAndress : IBusiness<Entities.Andress>
     {
-        public Conta Conta { get; set; }
     }
 }

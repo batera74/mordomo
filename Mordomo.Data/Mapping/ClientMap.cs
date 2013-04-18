@@ -1,9 +1,7 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,15 +10,14 @@ namespace Mordomo.Data.Mapping
         public ClientMap()
         {
             // Primary Key
-            this.HasKey(p =>p.Id);
+            this.HasKey(t => t.Id);
+
+            // Properties
+            this.Property(t => t.Id);
 
             // Table & Column Mappings
             this.ToTable("Client");
-            this.Property(p => p.Id).HasColumnName("Client_Id");            
-
-            // Relationships
-            this.HasRequired(p =>p.Account)
-                .WithRequiredPrincipal(co => co.Client);
+            this.Property(t => t.Id).HasColumnName("Client_Id");
         }
     }
 }

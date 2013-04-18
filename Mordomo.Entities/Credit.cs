@@ -8,6 +8,7 @@ namespace Mordomo.Entities
     public class Credit : EntityBase
     {
         public virtual Account Account { get; set; }
+        public int Account_Id { get; set; }
         public DateTime CreditDate { get; set; }
         public DateTime ExpirationDate { get; set; }
         public bool Used { get; set; }

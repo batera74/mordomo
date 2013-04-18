@@ -17,7 +17,9 @@ namespace Mordomo.Entities
         }
 
         public virtual Breadcrumb Breadcrumb { get; set; }
+        public int Breadcrumb_Id { get; set; }
         public int Order { get; set; }
         public virtual Page Page { get; set; }
+        public int Page_Id { get; set; }
     }
 }

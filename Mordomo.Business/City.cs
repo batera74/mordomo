@@ -8,13 +8,13 @@ namespace Mordomo.Business
 {
     public class City : ICity
     {
-         public IRepositoryFactory repFactory
+        public IRepositoryFactory repFactory
         {
             get;
             set;
         }
 
-         public City(IRepositoryFactory repFactory)
+        public City(IRepositoryFactory repFactory)
         {
             this.repFactory = repFactory;
         }

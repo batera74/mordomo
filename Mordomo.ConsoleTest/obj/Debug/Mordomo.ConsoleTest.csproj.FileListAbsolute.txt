@@ -33,8 +33,8 @@ C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.ConsoleTest\bin\Debug\Micr
 C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.ConsoleTest\bin\Debug\Microsoft.Practices.Unity.xml
 C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.ConsoleTest\bin\Debug\Microsoft.Practices.Unity.Configuration.pdb
 C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.ConsoleTest\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
-C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.ConsoleTest\bin\Debug\Mordomo.ConsoleTest.exe.config
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.ConsoleTest\obj\Debug\Mordomo.ConsoleTest.csprojResolveAssemblyReference.cache
+C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.ConsoleTest\bin\Debug\Mordomo.ConsoleTest.exe.config
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.ConsoleTest\bin\Debug\Mordomo.ConsoleTest.exe
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.ConsoleTest\bin\Debug\Mordomo.ConsoleTest.pdb
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.ConsoleTest\bin\Debug\EntityFramework.dll

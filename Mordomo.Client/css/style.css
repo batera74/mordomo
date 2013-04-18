@@ -164,7 +164,7 @@ p, .p {
 }
 
 .invisible {
-    visibility: hidden;
+    display: none;
 }
 
 /*********************************header*************************************/

@@ -16,5 +16,6 @@ namespace Mordomo.Entities
         public string Description { get; set; }
         public string Image { get; set; }
         public virtual List<Provider> Providers { get; set; }
+        public List<ServiceOrder> ServiceOrders { get; set; }
     }
 }

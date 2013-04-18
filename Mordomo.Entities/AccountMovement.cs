@@ -8,6 +8,7 @@ namespace Mordomo.Entities
     public class AccountMovement : EntityBase
     {
         public virtual Account Account { get; set; }
+        public int Account_Id { get; set; }
         public virtual ServiceOrder ServiceOrder { get; set; }
     }
 }

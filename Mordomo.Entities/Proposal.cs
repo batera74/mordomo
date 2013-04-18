@@ -13,7 +13,9 @@ namespace Mordomo.Entities
         }
 
         public virtual Client Client { get; set; }
+        public int Client_Id { get; set; }
         public virtual List<ServiceOrder> ServiceOrders { get; set; }
         public virtual Status Status { get; set; }
+        public int Status_Id { get; set; }
     }
 }

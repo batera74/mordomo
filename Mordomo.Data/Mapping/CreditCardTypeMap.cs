@@ -1,9 +1,7 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,18 +10,19 @@ namespace Mordomo.Data.Mapping
         public CreditCardTypeMap()
         {
             // Primary Key
-            this.HasKey(p =>p.Id);
+            this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(p =>p.Name)
+            this.Property(t => t.Name)
                 .IsRequired()
                 .HasMaxLength(50);
 
             // Table & Column Mappings
             this.ToTable("CreditCardType");
-            this.Property(p => p.Id).HasColumnName("CreditCardType_Id");
-            this.Property(p =>p.Name).HasColumnName("Name");
-            
+            this.Property(t => t.Id).HasColumnName("CreditCardType_Id");
+            this.Property(t => t.Name).HasColumnName("Name");
+            this.Property(t => t.CreationTime).HasColumnName("CreationTime");
+            this.Property(t => t.LastUpdate).HasColumnName("LastUpdate");
         }
     }
 }

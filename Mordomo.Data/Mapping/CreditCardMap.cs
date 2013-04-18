@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
 using Mordomo.Entities;
-using System.Linq;
-using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,40 +10,37 @@ namespace Mordomo.Data.Mapping
         public CreditCardMap()
         {
             // Primary Key
-            this.HasKey(p =>p.Id);
+            this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(p => p.CreditCardNumber)
+            this.Property(t => t.CreditCardNumber)
                 .IsRequired()
                 .HasMaxLength(24);
 
-            this.Property(p =>p.SecurityCode)
+            this.Property(t => t.SecurityCode)
                 .IsRequired()
                 .HasMaxLength(3);
-            
-            this.Property(p =>p.ExpirationMonth)
-                .IsRequired();
 
-            this.Property(p =>p.ExpirationYear)
-                .IsRequired();
-                        
             // Table & Column Mappings
             this.ToTable("CreditCard");
-            this.Property(p => p.Id).HasColumnName("CreditCard_Id");
-            this.Property(p => p.CreditCardNumber).HasColumnName("CreditCardNumber");
-            this.Property(p => p.SecurityCode).HasColumnName("SecurityCode");
-            this.Property(p => p.ExpirationMonth).HasColumnName("ExpirationMonth");
-            this.Property(p => p.ExpirationYear).HasColumnName("ExpirationYear");
-            
-            
-            //Relationships
-            this.HasRequired(p => p.CreditCardType)
-                .WithMany()
-                .WillCascadeOnDelete(false);
+            this.Property(t => t.Id).HasColumnName("CreditCard_Id");
+            this.Property(t => t.CreditCardNumber).HasColumnName("CreditCardNumber");
+            this.Property(t => t.SecurityCode).HasColumnName("SecurityCode");
+            this.Property(t => t.ExpirationMonth).HasColumnName("ExpirationMonth");
+            this.Property(t => t.ExpirationYear).HasColumnName("ExpirationYear");
+            this.Property(t => t.CreationTime).HasColumnName("CreationTime");
+            this.Property(t => t.LastUpdate).HasColumnName("LastUpdate");
+            this.Property(t => t.User_Id).HasColumnName("User_Id");
+            this.Property(t => t.CreditCardType_Id).HasColumnName("CreditCardType_Id");
 
-            this.HasRequired(p => p.User)
-                .WithMany(u => u.CreditCards)
-                .WillCascadeOnDelete();
+            // Relationships
+            this.HasRequired(t => t.CreditCardType)
+                .WithMany(t => t.CreditCards)
+                .HasForeignKey(d => d.CreditCardType_Id);
+            this.HasRequired(t => t.User)
+                .WithMany(t => t.CreditCards)
+                .HasForeignKey(d => d.User_Id);
+
         }
     }
 }

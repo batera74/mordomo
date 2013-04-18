@@ -1,9 +1,8 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,23 +11,27 @@ namespace Mordomo.Data.Mapping
         public RatingMap()
         {
             // Primary Key
-            this.HasKey(s => s.Id);
+            this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(s => s.Commentary)
-                .IsRequired()
-                .HasMaxLength(200);
-            
             // Table & Column Mappings
             this.ToTable("Rating");
-            this.Property(s => s.Id).HasColumnName("Rating_Id");
+            this.Property(t => t.Id).HasColumnName("Rating_Id");
+            this.Property(t => t.Commentary).HasColumnName("Commentary");
+            this.Property(t => t.RatingValue).HasColumnName("RatingValue");
+            this.Property(t => t.CreationTime).HasColumnName("CreationTime");
+            this.Property(t => t.LastUpdate).HasColumnName("LastUpdate");
+            this.Property(t => t.Provider_Id).HasColumnName("Provider_Id");
+            this.Property(t => t.Client_Id).HasColumnName("Client_Id");
 
             // Relationships
-            this.HasRequired(s => s.Provider)
-                .WithMany(p => p.Ratings);
+            this.HasOptional(t => t.Client)
+                .WithMany(t => t.Ratings)
+                .HasForeignKey(d => d.Client_Id);
+            this.HasOptional(t => t.Provider)
+                .WithMany(t => t.Ratings)
+                .HasForeignKey(d => d.Provider_Id);
 
-            this.HasRequired(s => s.Client)
-                .WithMany(c => c.Ratings);
         }
     }
 }

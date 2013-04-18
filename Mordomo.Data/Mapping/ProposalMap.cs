@@ -1,9 +1,8 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,18 +11,25 @@ namespace Mordomo.Data.Mapping
         public ProposalMap()
         {
             // Primary Key
-            this.HasKey(m => m.Id);
+            this.HasKey(t => t.Id);
 
+            // Properties
             // Table & Column Mappings
             this.ToTable("Proposal");
-            this.Property(m => m.Id).HasColumnName("Proposal_Id");
+            this.Property(t => t.Id).HasColumnName("Proposal_Id");
+            this.Property(t => t.CreationTime).HasColumnName("CreationTime");
+            this.Property(t => t.LastUpdate).HasColumnName("LastUpdate");
+            this.Property(t => t.Client_Id).HasColumnName("Client_Id");
+            this.Property(t => t.Status_Id).HasColumnName("Status_Id");
 
             // Relationships
-            this.HasRequired(s => s.Status)
-                .WithMany();
+            this.HasOptional(t => t.Client)
+                .WithMany(t => t.Proposals)
+                .HasForeignKey(d => d.Client_Id);
+            this.HasOptional(t => t.Status)
+                .WithMany(t => t.Proposals)
+                .HasForeignKey(d => d.Status_Id);
 
-            this.HasMany(p => p.ServiceOrders)
-                .WithRequired(s => s.Proposal);
         }
     }
 }

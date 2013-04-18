@@ -15,6 +15,8 @@ namespace Mordomo.Entities
 
         public virtual Plan Plan { get; set; }
 
+        public int Plan_Id { get; set; }
+
         public virtual List<AccountMovement> AccountMovements { get; set; }
 
         public virtual List<Credit> Credits { get; set; }

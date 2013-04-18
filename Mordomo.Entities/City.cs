@@ -9,5 +9,6 @@ namespace Mordomo.Entities
     {
         public string Name { get; set; }
         public virtual State State { get; set; }
+        public int State_Id { get; set; }
     }
 }

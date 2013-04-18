@@ -1,9 +1,7 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,17 +10,19 @@ namespace Mordomo.Data.Mapping
         public AndressTypeMap()
         {
             // Primary Key
-            this.HasKey(e => e.Id);
+            this.HasKey(t => t.Id);
 
             // Properties
-
-            this.Property(e => e.Name)
+            this.Property(t => t.Name)
                 .IsRequired()
                 .HasMaxLength(50);
 
             // Table & Column Mappings
             this.ToTable("AndressType");
-            this.Property(e => e.Id).HasColumnName("AndressType_Id");   
+            this.Property(t => t.Id).HasColumnName("AndressType_Id");
+            this.Property(t => t.Name).HasColumnName("Name");
+            this.Property(t => t.CreationTime).HasColumnName("CreationTime");
+            this.Property(t => t.LastUpdate).HasColumnName("LastUpdate");
         }
     }
 }

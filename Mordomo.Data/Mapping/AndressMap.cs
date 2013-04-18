@@ -1,9 +1,7 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,36 +10,38 @@ namespace Mordomo.Data.Mapping
         public AndressMap()
         {
             // Primary Key
-            this.HasKey(e => e.Id);
+            this.HasKey(t => t.Id);
 
             // Properties
 
-            this.Property(e => e.AndressLine1)
+            this.Property(t => t.AndressLine1)
                 .IsRequired()
                 .HasMaxLength(100);
 
-            this.Property(e => e.Number)
-                .IsRequired();
-
-            this.Property(e => e.Complement)
+            this.Property(t => t.Complement)
                 .IsRequired()
                 .HasMaxLength(30);
 
-            this.Property(e => e.PostalCode)
+            this.Property(t => t.PostalCode)
                 .IsRequired()
                 .HasMaxLength(8);
-            
 
             // Table & Column Mappings
             this.ToTable("Andress");
-            this.Property(m => m.Id).HasColumnName("Andress_Id");
+            this.Property(t => t.Id).HasColumnName("Andress_Id");
+            this.Property(t => t.AndressLine1).HasColumnName("AndressLine1");
+            this.Property(t => t.Number).HasColumnName("Number");
+            this.Property(t => t.Complement).HasColumnName("Complement");
+            this.Property(t => t.PostalCode).HasColumnName("PostalCode");
+            this.Property(t => t.CreationTime).HasColumnName("CreationTime");
+            this.Property(t => t.LastUpdate).HasColumnName("LastUpdate");
+            this.Property(t => t.User_Id).HasColumnName("User_Id");
 
-            // Relationships
-            this.HasRequired(e => e.AndressType)
-                .WithRequiredDependent();
+            // Relationships            
+            this.HasRequired(t => t.User)
+                .WithMany(t => t.Andresses)
+                .HasForeignKey(d => d.User_Id);
 
-            this.HasRequired(e => e.City)
-                .WithRequiredDependent();
         }
     }
 }

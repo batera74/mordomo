@@ -13,15 +13,6 @@ namespace Mordomo.Client.WebData {
     public partial class UserRegistration {
         
         /// <summary>
-        /// hdnPersonType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdnPersonType;
-        
-        /// <summary>
         /// breadCrumb control.
         /// </summary>
         /// <remarks>
@@ -31,31 +22,13 @@ namespace Mordomo.Client.WebData {
         protected global::Mordomo.Client.Controls.BreadCrumb breadCrumb;
         
         /// <summary>
-        /// UpdatePanel1 control.
+        /// hdnPersonType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
-        
-        /// <summary>
-        /// lnkPhysicalPerson control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkPhysicalPerson;
-        
-        /// <summary>
-        /// lnkLegalPerson control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkLegalPerson;
+        protected global::System.Web.UI.WebControls.HiddenField hdnPersonType;
         
         /// <summary>
         /// txtName control.
@@ -112,22 +85,22 @@ namespace Mordomo.Client.WebData {
         protected global::System.Web.UI.WebControls.TextBox txtCPF;
         
         /// <summary>
-        /// Radio1 control.
+        /// rdnMale control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton Radio1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rdnMale;
         
         /// <summary>
-        /// Radio2 control.
+        /// rdnFemale control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton Radio2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rdnFemale;
         
         /// <summary>
         /// txtFancyName control.
@@ -139,22 +112,22 @@ namespace Mordomo.Client.WebData {
         protected global::System.Web.UI.WebControls.TextBox txtFancyName;
         
         /// <summary>
-        /// TextBox5 control.
+        /// txtCorporateName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox txtCorporateName;
         
         /// <summary>
-        /// TextBox4 control.
+        /// txtCnpj control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtCnpj;
         
         /// <summary>
         /// txtPhoneAreaCode control.
@@ -166,13 +139,13 @@ namespace Mordomo.Client.WebData {
         protected global::System.Web.UI.WebControls.TextBox txtPhoneAreaCode;
         
         /// <summary>
-        /// TextBox6 control.
+        /// txtPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox txtPhone;
         
         /// <summary>
         /// txtMobilePhoneAreaCode control.
@@ -229,22 +202,22 @@ namespace Mordomo.Client.WebData {
         protected global::System.Web.UI.WebControls.TextBox txtAndress;
         
         /// <summary>
-        /// txtNumber control.
+        /// txtAndressNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumber;
+        protected global::System.Web.UI.WebControls.TextBox txtAndressNumber;
         
         /// <summary>
-        /// txtComplement control.
+        /// txtAndressComplement control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtComplement;
+        protected global::System.Web.UI.WebControls.TextBox txtAndressComplement;
         
         /// <summary>
         /// txtPostalCode control.
@@ -256,13 +229,13 @@ namespace Mordomo.Client.WebData {
         protected global::System.Web.UI.WebControls.TextBox txtPostalCode;
         
         /// <summary>
-        /// cc1 control.
+        /// updAndress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.CascadingDropDown cc1;
+        protected global::System.Web.UI.UpdatePanel updAndress;
         
         /// <summary>
         /// ddlState control.
@@ -274,15 +247,6 @@ namespace Mordomo.Client.WebData {
         protected global::System.Web.UI.WebControls.DropDownList ddlState;
         
         /// <summary>
-        /// cc2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.CascadingDropDown cc2;
-        
-        /// <summary>
         /// ddlCity control.
         /// </summary>
         /// <remarks>
@@ -290,6 +254,15 @@ namespace Mordomo.Client.WebData {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCity;
+        
+        /// <summary>
+        /// hdnCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnCity;
         
         /// <summary>
         /// ddlAndressType control.
@@ -301,12 +274,21 @@ namespace Mordomo.Client.WebData {
         protected global::System.Web.UI.WebControls.DropDownList ddlAndressType;
         
         /// <summary>
-        /// lnkEnviar control.
+        /// hdnAndressType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkEnviar;
+        protected global::System.Web.UI.WebControls.HiddenField hdnAndressType;
+        
+        /// <summary>
+        /// lnkSend control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkSend;
     }
 }

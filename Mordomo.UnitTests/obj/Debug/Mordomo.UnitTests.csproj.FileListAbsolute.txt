@@ -14,6 +14,7 @@ C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\obj\Debug\Mordom
 C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\Mordomo.UnitTests.dll.config
 C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\Mordomo.FakeEntities.dll
 C:\Users\guilhermea\Documents\GitHub\omordomo\Mordomo.UnitTests\bin\Debug\Mordomo.FakeEntities.pdb
+C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.UnitTests\obj\Debug\Mordomo.UnitTests.csprojResolveAssemblyReference.cache
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.UnitTests\bin\Debug\Mordomo.UnitTests.dll.config
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.UnitTests\bin\Debug\Mordomo.UnitTests.dll
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.UnitTests\bin\Debug\Mordomo.UnitTests.pdb
@@ -27,6 +28,5 @@ C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.UnitTests\bin\Debug\Mordomo
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.UnitTests\bin\Debug\Mordomo.Entities.pdb
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.UnitTests\bin\Debug\Mordomo.FakeEntities.pdb
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.UnitTests\bin\Debug\EntityFramework.xml
-C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.UnitTests\obj\Debug\Mordomo.UnitTests.csprojResolveAssemblyReference.cache
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.UnitTests\obj\Debug\Mordomo.UnitTests.dll
 C:\Users\guilhermea\Documents\GitHub\mordomo\Mordomo.UnitTests\obj\Debug\Mordomo.UnitTests.pdb

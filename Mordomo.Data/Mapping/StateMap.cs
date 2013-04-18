@@ -1,9 +1,8 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,22 +11,27 @@ namespace Mordomo.Data.Mapping
         public StateMap()
         {
             // Primary Key
-            this.HasKey(p => p.Id);
+            this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(p => p.Name)
+            this.Property(t => t.Name)
                 .IsRequired()
                 .HasMaxLength(50);
 
             // Table & Column Mappings
             this.ToTable("State");
-            this.Property(p => p.Id).HasColumnName("State_Id");
-            this.Property(p => p.Name).HasColumnName("Name");
+            this.Property(t => t.Id).HasColumnName("State_Id");
+            this.Property(t => t.Name).HasColumnName("Name");
+            this.Property(t => t.Acronym).HasColumnName("Acronym");
+            this.Property(t => t.CreationTime).HasColumnName("CreationTime");
+            this.Property(t => t.LastUpdate).HasColumnName("LastUpdate");
+            this.Property(t => t.Country_Id).HasColumnName("Country_Id");
 
-            //Relationships
-            this.HasMany(s => s.Cities)
-                .WithRequired(c => c.State)
-                .WillCascadeOnDelete();
+            // Relationships
+            this.HasRequired(t => t.Country)
+                .WithMany(t => t.States)
+                .HasForeignKey(d => d.Country_Id);
+
         }
     }
 }

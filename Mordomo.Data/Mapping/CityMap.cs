@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
 using Mordomo.Entities;
-using System.Linq;
-using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,17 +10,26 @@ namespace Mordomo.Data.Mapping
         public CityMap()
         {
             // Primary Key
-            this.HasKey(p => p.Id);
+            this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(p => p.Name)
+            this.Property(t => t.Name)
                 .IsRequired()
                 .HasMaxLength(60);
 
             // Table & Column Mappings
             this.ToTable("City");
-            this.Property(p => p.Id).HasColumnName("City_Id");
-            this.Property(p => p.Name).HasColumnName("Name");            
+            this.Property(t => t.Id).HasColumnName("City_Id");
+            this.Property(t => t.Name).HasColumnName("Name");
+            this.Property(t => t.CreationTime).HasColumnName("CreationTime");
+            this.Property(t => t.LastUpdate).HasColumnName("LastUpdate");
+            this.Property(t => t.State_Id).HasColumnName("State_Id");
+
+            // Relationships
+            this.HasRequired(t => t.State)
+                .WithMany(t => t.Cities)
+                .HasForeignKey(d => d.State_Id);
+
         }
     }
 }

@@ -23,6 +23,7 @@ C:\Users\guilhermea\Documents\GitHub\omordomo\mordomo.client\bin\Microsoft.Pract
 C:\Users\guilhermea\Documents\GitHub\omordomo\mordomo.client\bin\Microsoft.Practices.Unity.xml
 C:\Users\guilhermea\Documents\GitHub\omordomo\mordomo.client\bin\Microsoft.Practices.Unity.Configuration.pdb
 C:\Users\guilhermea\Documents\GitHub\omordomo\mordomo.client\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\obj\Debug\Mordomo.Client.csprojResolveAssemblyReference.cache
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\Mordomo.Client.dll
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\Mordomo.Client.pdb
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\AjaxControlToolkit.dll
@@ -33,11 +34,13 @@ C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\Microsoft.Practi
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\Mordomo.Business.dll
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\Mordomo.Data.dll
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\Mordomo.Entities.dll
+C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\Mordomo.Infrastructure.dll
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\SanitizerProviders.dll
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\EntityFramework.dll
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\Mordomo.Business.pdb
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\Mordomo.Data.pdb
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\Mordomo.Entities.pdb
+C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\Mordomo.Infrastructure.pdb
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\Microsoft.Practices.ServiceLocation.pdb
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\Microsoft.Practices.ServiceLocation.xml
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\Microsoft.Practices.Unity.xml
@@ -59,6 +62,5 @@ C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\ru\AjaxControlTo
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\tr-TR\AjaxControlToolkit.resources.dll
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\zh-CHS\AjaxControlToolkit.resources.dll
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\bin\zh-CHT\AjaxControlToolkit.resources.dll
-C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\obj\Debug\Mordomo.Client.csprojResolveAssemblyReference.cache
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\obj\Debug\Mordomo.Client.dll
 C:\Users\guilhermea\Documents\GitHub\mordomo\mordomo.client\obj\Debug\Mordomo.Client.pdb

@@ -1,9 +1,7 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace Mordomo.Data.Mapping
@@ -13,26 +11,17 @@ namespace Mordomo.Data.Mapping
         public ServiceMap()
         {
             // Primary Key
-            this.HasKey(s => s.Id);
+            this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(s => s.Name)
-                .IsRequired()
-                .HasMaxLength(100);
-
-            this.Property(s => s.Description)
-                .IsRequired()
-                .HasMaxLength(300);
-
             // Table & Column Mappings
             this.ToTable("Service");
-            this.Property(s => s.Id).HasColumnName("Service_Id");
-            this.Property(s => s.Name).HasColumnName("Name");
-            this.Property(s => s.Description).HasColumnName("Description");
-
-            // Relationships
-            this.HasMany(s => s.Providers)
-                .WithMany(f => f.Services);
+            this.Property(t => t.Id).HasColumnName("Service_Id");
+            this.Property(t => t.Name).HasColumnName("Name");
+            this.Property(t => t.Description).HasColumnName("Description");
+            this.Property(t => t.Image).HasColumnName("Image");
+            this.Property(t => t.CreationTime).HasColumnName("CreationTime");
+            this.Property(t => t.LastUpdate).HasColumnName("LastUpdate");
         }
     }
 }

@@ -1,9 +1,7 @@
-﻿using Mordomo.Entities;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
+using Mordomo.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mordomo.Data.Mapping
 {
@@ -12,20 +10,19 @@ namespace Mordomo.Data.Mapping
         public BreadcrumbMap()
         {
             // Primary Key
-            this.HasKey(p => p.Id);
+            this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(p => p.Name)
+            this.Property(t => t.Name)
                 .IsRequired()
                 .HasMaxLength(40);
 
             // Table & Column Mappings
             this.ToTable("Breadcrumb");
-            this.Property(p => p.Id).HasColumnName("Breadcrumb_Id");
-
-            //Relationships
-            this.HasMany(b => b.BreadcrumbItems)
-                .WithRequired(bi => bi.Breadcrumb);
+            this.Property(t => t.Id).HasColumnName("Breadcrumb_Id");
+            this.Property(t => t.Name).HasColumnName("Name");
+            this.Property(t => t.CreationTime).HasColumnName("CreationTime");
+            this.Property(t => t.LastUpdate).HasColumnName("LastUpdate");
         }
     }
 }
